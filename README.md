@@ -14,7 +14,7 @@ Compilation: Compiled using gcc
 
 Sum1tox.c: Input source file name
 
-Execution: After compilation, execute the program with the command ./sum1tox.
+Execution: After compilation, execute the program with the command `./sum1tox.`
 
 
 ![Screenshot 2024-07-17 092149](https://github.com/user-attachments/assets/af84717b-b0c1-4f8a-9d30-8d80195b5b6d)
