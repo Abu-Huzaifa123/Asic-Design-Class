@@ -10,7 +10,7 @@ This is the main source file containing the C program.
 Compilation: Compiled using gcc
 `gcc -o sum1tox Sum1tox.c`
 
--o sum1tox: Specifies the output file name as sum1tox
+`-o sum1tox`: Specifies the output file name as sum1tox
 
 Sum1tox.c: Input source file name
 
