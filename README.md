@@ -11,7 +11,9 @@ Compilation: Compiled using gcc
 `gcc -o sum1tox Sum1tox.c`
 
 -o sum1tox: Specifies the output file name as sum1tox
+
 Sum1tox.c: Input source file name
+
 Execution: After compilation, execute the program with the command ./sum1tox.
 
 
