@@ -8,7 +8,8 @@ This repository contains a simple C program that calculates the sum of n numbers
 File: Sum1tox.c
 This is the main source file containing the C program.
 Compilation: Compiled using gcc
-Command: gcc -o sum1tox Sum1tox.c
+`gcc -o sum1tox Sum1tox.c`
+
 -o sum1tox: Specifies the output file name as sum1tox
 Sum1tox.c: Input source file name
 Execution: After compilation, execute the program with the command ./sum1tox.
