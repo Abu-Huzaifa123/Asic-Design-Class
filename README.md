@@ -1,7 +1,10 @@
 # Asic-Design-Class
 Task-1
+
 Write a C code and compile it on gcc compiler.
+
 This repository contains a simple C program that calculates the sum of n numbers.
+
 File: Sum1tox.c
 This is the main source file containing the C program.
 Compilation: Compiled using gcc
