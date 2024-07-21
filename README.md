@@ -43,17 +43,17 @@ Finally we use  `riscv64-unknown-elf-objdump -d sum1tox | less` to dump the asse
 Now we can see that our output is same at 1018c location using both gcc and RISCV compiler.
 
 
-Task-3: To find the output of C program on the RISC V Compiler and debug each instruction using the Spike command.
+# Task-3:To find the output of C program on the RISC V Compiler and debug each instruction using the Spike command.
 
-Step-1: Firstly we verified that our c code result come from gcc and Risc-V compiler are equal and then we start debugging using `spike -d pk sum1tox` command.
+**Step-1:** Firstly we verified that our c code result come from gcc and Risc-V compiler are equal and then we start debugging using `spike -d pk sum1tox` command.
 
 ![Screenshot 2024-07-21 142420](https://github.com/user-attachments/assets/d04d0992-002d-437e-98b4-f4af68473c0d)
 
-Step-2: The Assembly code of our C program is:
+**Step-2:** The Assembly code of our C program is:
 
 ![Screenshot 2024-07-21 104126](https://github.com/user-attachments/assets/832f190c-048a-46c8-91a8-3fc81b4e1869)
 
-Step-3: From the assembly code we can see that the first address is at 100b0. To debug it we use the following command: `until pc 0 100b0`
+**Step-3:** From the assembly code we can see that the first address is at 100b0. To debug it we use the following command: `until pc 0 100b0`
 Our first instruction is reg 0. To check it's content we use following code: `reg 0 a0`. Similarly we can get content of each and every line of our assembly code.
 
 ![Screenshot 2024-07-21 104507](https://github.com/user-attachments/assets/389df2cf-23ac-42f1-8ee6-cf2b2b22f17a)
