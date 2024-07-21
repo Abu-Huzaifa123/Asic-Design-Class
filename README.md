@@ -1,5 +1,5 @@
 # Asic-Design-Class
-Task-1
+## Task-1
 
 Write a C code and compile it on gcc compiler.
 
