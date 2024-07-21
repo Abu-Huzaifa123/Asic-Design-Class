@@ -19,22 +19,22 @@ Execution: After compilation, execute the program with the command `./sum1tox.`
 
 ![Screenshot 2024-07-17 092149](https://github.com/user-attachments/assets/af84717b-b0c1-4f8a-9d30-8d80195b5b6d)
 
-Task-2
+## Task-2
 
 Compile same code and run it onto RISC-V gcc compiler.
 
-Step:1
+**Step:1**
 
 Compiled the c code on RISC-V compiler using `cat Sum1tox.c`. 
 
 ![Screenshot 2024-07-18 195246](https://github.com/user-attachments/assets/6899beb4-d383-4b27-a502-3cd120e7b846)
 
-Step:2
+**Step:2**
 
 Then convert the C program to assembly code using `riscv64-unknown-elf-objdump -d sum1tox`
 and after that use this command: `riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum1tox Sum1tox.c` to compile the program.
 
-Step:3
+**Step:3**
 
 Finally we use  `riscv64-unknown-elf-objdump -d sum1tox | less` to dump the assembly code in terminal.
 
@@ -43,7 +43,7 @@ Finally we use  `riscv64-unknown-elf-objdump -d sum1tox | less` to dump the asse
 Now we can see that our output is same at 1018c location using both gcc and RISCV compiler.
 
 
-# Task-3:To find the output of C program on the RISC V Compiler and debug each instruction using the Spike command.
+## Task-3:To find the output of C program on the RISC V Compiler and debug each instruction using the Spike command.
 
 **Step-1:** Firstly we verified that our c code result come from gcc and Risc-V compiler are equal and then we start debugging using `spike -d pk sum1tox` command.
 
