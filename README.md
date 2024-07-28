@@ -181,13 +181,15 @@ This is the waveform of our verilog program:
 
     This is the waveform of our verilog program:
 
-    ![Screenshot 2024-07-28 140514](https://github.com/user-attachments/assets/bc9784b1-b00d-4e4a-af17-897ca4dba20b)
+    ![Screenshot 2024-07-28 140514](https://github.com/user-attachments/assets/153f4172-2140-4c6c-875b-db609ec141f9)
+
 
     `BNE r0, r0, 20`
 
     This is the waveform of our verilog program:
 
-    ![Screenshot 2024-07-28 184617](https://github.com/user-attachments/assets/3718d36f-8039-4da0-a710-360c172c7c68)
+    ![Screenshot 2024-07-28 184617](https://github.com/user-attachments/assets/2e8aca5c-189c-4bdb-b732-86a94eab00bb)
+
 
     `BEQ r0, r0, 15`
 
