@@ -53,9 +53,28 @@ Now we can see that our output is same at 1018c location using both gcc and RISC
 
 ![Screenshot 2024-07-21 104126](https://github.com/user-attachments/assets/832f190c-048a-46c8-91a8-3fc81b4e1869)
 
+
+
 **Step-3:** From the assembly code we can see that the first address is at 100b0. To debug it we use the following command: `until pc 0 100b0`
 Our first instruction is reg 0. To check it's content we use following code: `reg 0 a0`. Similarly we can get content of each and every line of our assembly code.
 
 ![Screenshot 2024-07-21 104507](https://github.com/user-attachments/assets/389df2cf-23ac-42f1-8ee6-cf2b2b22f17a)
 
+## Task-4: To run assembly instructions using a given verilog code for a risc-V processor.
+
+| Operation                | RISC-V ISA  |
+|--------------------------|-------------|
+| ADD r8, r9, r10          | 00A482B3    |
+| SUB r10, r8, r9          | 409482B3    |
+| AND r9, r8, r10          | 00A4C2B3    |
+| OR r8, r9, r5            | 005482B3    |
+| XOR r8, r8, r4           | 004482B3    |
+| SLT r00, r1, r4          | 004002B3    |
+| ADDI r02, r2, 5          | 00510113    |
+| SW r2, r0, 4            | 00412023    |
+| SRL r06, r01, r1         | 00119533    |
+| BNE r0, r0, 20           | 01400063    |
+| BEQ r0, r0, 15           | 00F00063    |
+| LW r03, r01, 2           | 00210183    |
+| SLL r05, r01, r1         | 00109533    |
 
