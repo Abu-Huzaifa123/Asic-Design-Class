@@ -83,13 +83,30 @@ The following commands were used to run the verilog code:
 
 ![Screenshot 2024-07-28 144818](https://github.com/user-attachments/assets/60344dc3-8cee-4b74-9d50-9fba65bd99e1)
 
+The given hardcoded instructions are:
+
+![Screenshot 2024-07-28 115648](https://github.com/user-attachments/assets/2984cac6-79ba-4429-a171-baa32e2f4117)
+
+Our verilog program instructions are:
+
+![Screenshot 2024-07-28 125110](https://github.com/user-attachments/assets/a5c481a8-89f9-4d21-83bd-02b378466c7e)
+
+
 Here in this code there are some mismatch in the below images because the code which we are using is already hardcoded:
 
-** Instruction-1:**
+**Instruction-1:**
 
 `ADD R8, R9, R10`
 
-This is the waveform of the given verilog code:
+This is the waveform of the given hardcoded verilog program:
+
+![Screenshot 2024-07-28 115909](https://github.com/user-attachments/assets/a25b54d1-dc1d-4d60-8591-835493c83d55)
+
+This is the waveform of our verilog program:
+
+![Screenshot 2024-07-28 140238](https://github.com/user-attachments/assets/b3905a23-b725-4876-af62-8a26068ca64e)
+
+
 
 
 
