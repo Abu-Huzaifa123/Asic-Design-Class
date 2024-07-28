@@ -62,19 +62,34 @@ Our first instruction is reg 0. To check it's content we use following code: `re
 
 ## Task-4: To run assembly instructions using a given verilog code for a risc-V processor.
 
-| Operation                | RISC-V ISA  |
-|--------------------------|-------------|
-| ADD r8, r9, r10          | 00A482B3    |
-| SUB r10, r8, r9          | 409482B3    |
-| AND r9, r8, r10          | 00A4C2B3    |
-| OR r8, r9, r5            | 005482B3    |
-| XOR r8, r8, r4           | 004482B3    |
-| SLT r00, r1, r4          | 004002B3    |
-| ADDI r02, r2, 5          | 00510113    |
-| SW r2, r0, 4            | 00412023    |
-| SRL r06, r01, r1         | 00119533    |
-| BNE r0, r0, 20           | 01400063    |
-| BEQ r0, r0, 15           | 00F00063    |
-| LW r03, r01, 2           | 00210183    |
-| SLL r05, r01, r1         | 00109533    |
+
+| Operation         | RISC-V ISA      | Hardcoded ISA   | Instruction Format |
+|-------------------|-----------------|-----------------|---------------------|
+| ADD r8, r9, r10   | 32’h00A482B3    | 32'h02208300    | R-type              |
+| SUB r10, r8, r9   | 32’h409482B3    | 32'h02209380    | R-type              |
+| AND r9, r8, r10   | 32’h00A4C2B3    | 32'h0230A400    | R-type              |
+| OR r8, r9, r5     | 32’h005482B3    | 32'h02513480    | R-type              |
+| XOR r8, r8, r4    | 32’h004482B3    | 32'h0240C500    | R-type              |
+| SLT r00, r1, r4   | 32’h004002B3    | 32'h02415580    | R-type              |
+| ADDI r02, r2, 5   | 32’h00510113    | 32'h00520600    | I-type              |
+| SW r2, r0, 4      | 32’h00412023    | 32'h00209181    | S-type              |
+| SRL r06, r01, r1  | 32’h00119533    | 32'h00271803    | R-type              |
+| BNE r0, r0, 20    | 32’h01400063    | 32'h01409002    | B-type              |
+| BEQ r0, r0, 15    | 32’h00F00063    | 32'h00F00002    | B-type              |
+| LW r03, r01, 2    | 32’h00210183    | 32'h00208681    | I-type              |
+| SLL r05, r01, r1  | 32’h00109533    | 32’h00208783    | R-type              |
+
+The following commands were used to run the verilog code:
+
+![Screenshot 2024-07-28 144818](https://github.com/user-attachments/assets/60344dc3-8cee-4b74-9d50-9fba65bd99e1)
+
+Here in this code there are some mismatch in the below images because the code which we are using is already hardcoded:
+
+** Instruction-1:**
+
+`ADD R8, R9, R10`
+
+This is the waveform of the given verilog code:
+
+
 
