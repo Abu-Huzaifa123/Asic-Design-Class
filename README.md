@@ -106,6 +106,49 @@ This is the waveform of our verilog program:
 
 ![Screenshot 2024-07-28 140238](https://github.com/user-attachments/assets/b3905a23-b725-4876-af62-8a26068ca64e)
 
+**Instruction-2:**
+
+`SUB R10, R8, R9`
+
+This is the waveform of the given hardcoded verilog program:
+
+![Screenshot 2024-07-28 115942](https://github.com/user-attachments/assets/3adb8b54-269f-4fae-a213-16f37cd9f701)
+
+This is the waveform of our verilog program:
+
+![Screenshot 2024-07-28 140315](https://github.com/user-attachments/assets/fbe28a5c-a1d7-471e-a477-2dd75a885a2d)
+
+**Instruction-3:**
+
+`AND R9, R8, R10`
+
+ This is the waveform of the given hardcoded verilog program:
+
+ ![Screenshot 2024-07-28 120013](https://github.com/user-attachments/assets/a7426e2c-fc90-4047-ad83-e081414119ec)
+
+ This is the waveform of our verilog program:
+
+ ![Screenshot 2024-07-28 140330](https://github.com/user-attachments/assets/fcbfebaa-0100-4f14-9a92-1c55127a898b)
+
+ **Instruction-4:**
+
+ `OR R8, R9, R5`
+
+  This is the waveform of the given hardcoded verilog program:
+
+  ![Screenshot 2024-07-28 120035](https://github.com/user-attachments/assets/80f8c2a2-03b9-4c4b-8bd5-49101ffaaad3)
+
+  This is the waveform of our verilog program:
+
+  ![Screenshot 2024-07-28 140347](https://github.com/user-attachments/assets/4f63a635-3a6d-4f5f-909c-483181f553b3)
+
+Similarly for other remaining instructions we can match our verilog instruction with hardcoded instructions waveform and we can say that it is not matching with the given instructions waveform.
+
+
+
+
+ 
+
 
 
 
