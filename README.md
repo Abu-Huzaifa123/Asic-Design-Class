@@ -94,7 +94,6 @@ Our verilog program instructions are:
 
 Here in this code there are some mismatch in the below images because the code which we are using is already hardcoded:
 
-**Instruction-1:**
 
 `ADD R8, R9, R10`
 
@@ -106,7 +105,6 @@ This is the waveform of our verilog program:
 
 ![Screenshot 2024-07-28 140238](https://github.com/user-attachments/assets/b3905a23-b725-4876-af62-8a26068ca64e)
 
-**Instruction-2:**
 
 `SUB R10, R8, R9`
 
@@ -118,8 +116,6 @@ This is the waveform of our verilog program:
 
 ![Screenshot 2024-07-28 140315](https://github.com/user-attachments/assets/fbe28a5c-a1d7-471e-a477-2dd75a885a2d)
 
-**Instruction-3:**
-
 `AND R9, R8, R10`
 
  This is the waveform of the given hardcoded verilog program:
@@ -130,7 +126,6 @@ This is the waveform of our verilog program:
 
  ![Screenshot 2024-07-28 140330](https://github.com/user-attachments/assets/fcbfebaa-0100-4f14-9a92-1c55127a898b)
 
- **Instruction-4:**
 
  `OR R8, R9, R5`
 
@@ -142,7 +137,51 @@ This is the waveform of our verilog program:
 
   ![Screenshot 2024-07-28 140347](https://github.com/user-attachments/assets/4f63a635-3a6d-4f5f-909c-483181f553b3)
 
-Similarly for other remaining instructions we can match our verilog instruction with hardcoded instructions waveform and we can say that it is not matching with the given instructions waveform.
+  `XOR r8, r8, r4`
+
+  This is the waveform of the given hardcoded verilog program:
+
+  ![Screenshot 2024-07-28 120128](https://github.com/user-attachments/assets/de4b3cf8-4eef-4868-b5ef-3d10d976c579)
+
+  This is the waveform of our verilog program:
+
+  ![Screenshot 2024-07-28 140403](https://github.com/user-attachments/assets/aefa8bf4-491e-42f4-a685-09576e3f7ff2)
+
+  `SLT r00, r1, r4 `
+
+  This is the waveform of the given hardcoded verilog program:
+
+  ![Screenshot 2024-07-28 120156](https://github.com/user-attachments/assets/7c3b22f6-db6e-4aaf-9f55-b564e8c6f8ad)
+
+  This is the waveform of our verilog program:
+
+  ![Screenshot 2024-07-28 140426](https://github.com/user-attachments/assets/fa74712f-9fab-4c9b-939b-f091414b9859)
+
+  `ADDI r02, r2, 5 `
+
+  This is the waveform of the given hardcoded verilog program:
+
+  ![Screenshot 2024-07-28 120220](https://github.com/user-attachments/assets/32fefec3-ba90-4f8d-bdd3-c453cdcfc516)
+
+  This is the waveform of our verilog program:
+
+  ![Screenshot 2024-07-28 140442](https://github.com/user-attachments/assets/5c2c48df-ea70-45ef-8f44-6238c33ff02c)
+
+  
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+
+  
 
 
 
