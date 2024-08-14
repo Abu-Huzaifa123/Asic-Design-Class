@@ -197,9 +197,10 @@ This is the waveform of our verilog program:
 
 
 ## Task:5-->> To write an Application in C, compile it with gcc and Risc-v gcc
-**Application: **To design a Voting Machine which takes input from users and give final result according to inputs. 
+**Application:To design a Voting Machine which takes input from users and give final result according to inputs.** 
 
-** Step:1-->> C code of the application**
+**Step:1-->> C code of the application**
+
 > code
 
 ``` c
@@ -269,7 +270,9 @@ int main() {
 }
 ```
 
-** Step:2-->>**Compilation using risc-v compiler
+**Step:2-->> Compilation using risc-v compiler: For this we used command `cat Application.c`**
+
+> Code
 
 ``` c
 
@@ -342,7 +345,9 @@ vsduser@vsduser-VirtualBox:~/Downloads$
 
 ```
 
-** output after running risc-v compilation**
+
+**Output after running risc-v compilation using `riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o Asic_Application Application.c` command**
+
 
 ``` c
 vsduser@vsduser-VirtualBox:~/Downloads$ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o Asic_Application Application.c 
@@ -380,7 +385,7 @@ NOTA = 1
 No one got any votes, that's why voting is postponed and voting dates will be available soon!
 ```
 
-**Step:3-->>**To find the output of C program on the RISC V Compiler and debug each instruction using the Spike command**
+**Step:3-->> To debug each instruction using the `spike pk Asic_Application` command**
 
 ``` c
 vsduser@vsduser-VirtualBox:~/Downloads$ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o Asic_Application
@@ -418,10 +423,14 @@ NOTA = 1
 No one got any votes, that's why voting is postponed and voting dates will be available soon!
 
 ```
-  
-**Step:4-->>**Finally we use `riscv64-unknown-elf-objdump -d Asic_Application | less` to dump the assembly code in terminal.
 
-file:///home/vsduser/Pictures/Screenshot%20from%202024-08-14%2017-49-09.png![image](https://github.com/user-attachments/assets/91a6e4c0-8feb-4a1d-b80a-40da5ff9f4d0)
+**We can see that output coming from Risc-v compilation and after debugging using Spike command is same** 
+
+
+**Step:4-->> Finally we use `riscv64-unknown-elf-objdump -d Asic_Application | less` to dump the assembly code in terminal.**
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-08-14%2017-49-09.png![image](https://github.com/user-attachments/assets/c3f72645-4142-4bae-ae0f-0738cf214b18)
+
 
 
    
