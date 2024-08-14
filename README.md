@@ -270,7 +270,12 @@ int main() {
 }
 ```
 
-**Step:2-->> Compilation using risc-v compiler: For this we used command `cat Application.c`**
+**Step:2-->> Compilation using gcc compiler: For this we used command `gcc -o Asic_Application Application.c`**
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-08-14%2018-37-17.png![image](https://github.com/user-attachments/assets/d8b7ada4-b82c-4cea-b70c-563c66c6be24)
+
+
+**Step:3-->> Compilation using risc-v compiler: For this we used command `cat Application.c`**
 
 > Code
 
@@ -385,7 +390,7 @@ NOTA = 1
 No one got any votes, that's why voting is postponed and voting dates will be available soon!
 ```
 
-**Step:3-->> To debug each instruction using the `spike pk Asic_Application` command**
+**Step:4-->> To debug each instruction using the `spike pk Asic_Application` command**
 
 ``` c
 vsduser@vsduser-VirtualBox:~/Downloads$ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o Asic_Application
@@ -427,7 +432,7 @@ No one got any votes, that's why voting is postponed and voting dates will be av
 **We can see that output coming from Risc-v compilation and after debugging using Spike command is same** 
 
 
-**Step:4-->> Finally we use `riscv64-unknown-elf-objdump -d Asic_Application | less` to dump the assembly code in terminal.**
+**Step:5-->> Finally we use `riscv64-unknown-elf-objdump -d Asic_Application | less` to dump the assembly code in terminal.**
 
 file:///home/vsduser/Pictures/Screenshot%20from%202024-08-14%2017-49-09.png![image](https://github.com/user-attachments/assets/c3f72645-4142-4bae-ae0f-0738cf214b18)
 
