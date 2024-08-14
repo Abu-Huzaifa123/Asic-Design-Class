@@ -196,9 +196,10 @@ This is the waveform of our verilog program:
    ![Screenshot 2024-07-28 184650](https://github.com/user-attachments/assets/0f774abb-2bb4-4771-8733-9a26d3261b87)
 
 
-## Task-5
+## Task:5-->> To write an Application in C, compile it with gcc and Risc-v gcc
+**Application: **To design a Voting Machine which takes input from users and give final result according to inputs. 
 
-
+** Step:1-->> C code of the application**
 > code
 
 ``` c
@@ -268,10 +269,159 @@ int main() {
 }
 ```
 
+** Step:2-->>**Compilation using risc-v compiler
 
+``` c
 
+vsduser@vsduser-VirtualBox:~/Downloads$ cat Application.c 
+#include<stdio.h> 
 
+int main() { 
+    char n[10]; 
+    int a[10], csp = 0, bjp = 0, bsp = 0, sp = 0, nota = 0, win = 0;
+
+    again: 
+    printf("\nPlease enter your name:"); 
+    scanf("%s", n);
+
+    printf("\nHello %s please enter your age:", n); 
+    scanf("%d", &a[0]); // a[0] for age.
+
+    if(a[0] >= 18) { 
+        printf("\nYou are eligible for voting!\nLet's start the process."); 
+        printf("\nEnter 1-CONGRESS\nEnter 2-BJP\nEnter 3-BAHUJAN SAMAJWADI PARTY\nEnter 4-SAMAJWADI PARTY\nEnter 5-NOTA\n:"); 
+        scanf("%d", &a[1]); // a[1] for your vote.
+
+        if(a[1] == 1) csp++; 
+        if(a[1] == 2) bjp++; 
+        if(a[1] == 3) bsp++; 
+        if(a[1] == 4) sp++; 
+        if(a[1] == 5) nota++;
+
+        printf("\nAll process is completed! Here is your receipt."); 
+        printf("\nReceipt:\nName: %s\nAge: %d", n, a[0]);
+
+        if(a[1] == 1) printf("\nVote: CONGRESS"); 
+        if(a[1] == 2) printf("\nVote: BJP"); 
+        if(a[1] == 3) printf("\nVote: BAHUJAN SAMAJWADI PARTY"); 
+        if(a[1] == 4) printf("\nVote: SAMAJWADI PARTY"); 
+        if(a[1] == 5) printf("\nVote: NOTA");
+
+        printf("\nThanks for visiting :)");
+
+        nefv: 
+        printf("\nEnter 0 for exit\nEnter 1 for allowing another person to vote:"); 
+        scanf("%d", &a[2]);
+
+        if(a[2] == 0) { 
+            printf("\nResult of voting\nCONGRESS = %d\nBJP = %d\nBAHUJAN SAMAJWADI PARTY = %d\nSAMAJWADI PARTY = %d\nNOTA = %d", csp, bjp, bsp, sp, nota);
+            win = ((csp > bjp) && (csp > bsp) && (csp > sp)) ? csp :
+                  ((bjp > csp) && (bjp > bsp) && (bjp > sp)) ? bjp :
+                  ((bsp > bjp) && (bsp > csp) && (bsp > sp)) ? bsp :
+                  ((sp > bjp) && (sp > csp) && (sp > bsp)) ? sp : nota;
+
+            if(win == bjp) printf("\nThe Winner is BJP!"); 
+            if(win == csp) printf("\nThe Winner is CONGRESS!"); 
+            if(win == bsp) printf("\nThe Winner is BAHUJAN SAMAJWADI PARTY!"); 
+            if(win == sp) printf("\nThe Winner is SAMAJWADI PARTY!"); 
+            if((win == nota) && (bjp == 0) && (csp == 0) && (bsp == 0) && (sp == 0)) 
+                printf("\nNo one got any votes, that's why voting is postponed and voting dates will be available soon!"); 
+            if(win < nota) printf(", but NOTA got more votes than the winner.");
+        } 
+        
+        if(a[2] == 1) 
+            goto again; 
+    } else { 
+        printf("\nYou are not eligible for voting.\nThanks for visiting!"); 
+        goto nefv; 
+    } // Not eligible for voting.
+
+    return 0; 
+}
+vsduser@vsduser-VirtualBox:~/Downloads$ 
+
+```
+
+** output after running risc-v compilation**
+
+``` c
+vsduser@vsduser-VirtualBox:~/Downloads$ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o Asic_Application Application.c 
+vsduser@vsduser-VirtualBox:~/Downloads$ gcc Application.c 
+vsduser@vsduser-VirtualBox:~/Downloads$ ./a.out
+
+Please enter your name:Huzaifa
+
+Hello Huzaifa please enter your age:23
+
+You are eligible for voting!
+Let's start the process.
+Enter 1-CONGRESS
+Enter 2-BJP
+Enter 3-BAHUJAN SAMAJWADI PARTY
+Enter 4-SAMAJWADI PARTY
+Enter 5-NOTA
+:5
+
+All process is completed! Here is your receipt.
+Receipt:
+Name: Huzaifa
+Age: 23
+Vote: NOTA
+Thanks for visiting :)
+Enter 0 for exit
+Enter 1 for allowing another person to vote:0
+
+Result of voting
+CONGRESS = 0
+BJP = 0
+BAHUJAN SAMAJWADI PARTY = 0
+SAMAJWADI PARTY = 0
+NOTA = 1
+No one got any votes, that's why voting is postponed and voting dates will be available soon!
+```
+
+**Step:3-->>**To find the output of C program on the RISC V Compiler and debug each instruction using the Spike command**
+
+``` c
+vsduser@vsduser-VirtualBox:~/Downloads$ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o Asic_Application
+vsduser@vsduser-VirtualBox:~/Downloads$ spike pk Asic_Application 
+bbl loader
+
+Please enter your name:Huzaifa
+
+Hello Huzaifa please enter your age:23
+
+You are eligible for voting!
+Let's start the process.
+Enter 1-CONGRESS
+Enter 2-BJP
+Enter 3-BAHUJAN SAMAJWADI PARTY
+Enter 4-SAMAJWADI PARTY
+Enter 5-NOTA
+:5
+
+All process is completed! Here is your receipt.
+Receipt:
+Name: Huzaifa
+Age: 23
+Vote: NOTA
+Thanks for visiting :)
+Enter 0 for exit
+Enter 1 for allowing another person to vote:0
+
+Result of voting
+CONGRESS = 0
+BJP = 0
+BAHUJAN SAMAJWADI PARTY = 0
+SAMAJWADI PARTY = 0
+NOTA = 1
+No one got any votes, that's why voting is postponed and voting dates will be available soon!
+
+```
   
+**Step:4-->>**Finally we use `riscv64-unknown-elf-objdump -d Asic_Application | less` to dump the assembly code in terminal.
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-08-14%2017-49-09.png![image](https://github.com/user-attachments/assets/91a6e4c0-8feb-4a1d-b80a-40da5ff9f4d0)
 
 
    
