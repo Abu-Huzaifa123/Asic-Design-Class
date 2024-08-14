@@ -1,7 +1,9 @@
 # Asic-Design-Class
-## Task-1
+<details>
+ 
+<summary> <h1>Task-1</h1> </summary>
 
-Write a C code and compile it on gcc compiler.
+## Task-1: Write a C code and compile it on gcc compiler.
 
 This repository contains a simple C program that calculates the sum of n numbers.
 
@@ -19,9 +21,13 @@ Execution: After compilation, execute the program with the command `./sum1tox.`
 
 ![Screenshot 2024-07-17 092149](https://github.com/user-attachments/assets/af84717b-b0c1-4f8a-9d30-8d80195b5b6d)
 
-## Task-2
+</details>
 
-Compile same code and run it onto RISC-V gcc compiler.
+<details>
+ 
+<summary> <h1>Task-2</h1> </summary>
+
+## Task-2: Compile same code and run it onto RISC-V gcc compiler.
 
 **Step:1**
 
@@ -42,6 +48,11 @@ Finally we use  `riscv64-unknown-elf-objdump -d sum1tox | less` to dump the asse
 
 Now we can see that our output is same at 1018c location using both gcc and RISCV compiler.
 
+</details>
+
+<details>
+ 
+<summary> <h1>Task-3</h1> </summary>
 
 ## Task-3:To find the output of C program on the RISC V Compiler and debug each instruction using the Spike command.
 
@@ -59,6 +70,12 @@ Now we can see that our output is same at 1018c location using both gcc and RISC
 Our first instruction is reg 0. To check it's content we use following code: `reg 0 a0`. Similarly we can get content of each and every line of our assembly code.
 
 ![Screenshot 2024-07-21 104507](https://github.com/user-attachments/assets/389df2cf-23ac-42f1-8ee6-cf2b2b22f17a)
+
+</details>
+ 
+<details>
+ 
+<summary> <h1>Task-4</h1> </summary>
 
 ## Task-4: To run assembly instructions using a given verilog code for a risc-V processor.
 
@@ -195,6 +212,12 @@ This is the waveform of our verilog program:
 
    ![Screenshot 2024-07-28 184650](https://github.com/user-attachments/assets/0f774abb-2bb4-4771-8733-9a26d3261b87)
 
+</details>
+ 
+
+<details>
+ 
+<summary> <h1>Task-5</h1> </summary>
 
 ## Task:5-->> To write an Application in C, compile it with gcc and Risc-v gcc
 **Application:To design a Voting Machine which takes input from users and give final result according to inputs.** 
@@ -436,9 +459,9 @@ No one got any votes, that's why voting is postponed and voting dates will be av
 
 file:///home/vsduser/Pictures/Screenshot%20from%202024-08-14%2017-49-09.png![image](https://github.com/user-attachments/assets/c3f72645-4142-4bae-ae0f-0738cf214b18)
 
+</details>
+ 
 
-
-   
 
 
    
