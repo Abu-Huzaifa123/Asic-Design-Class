@@ -429,7 +429,7 @@ No one got any votes, that's why voting is postponed and voting dates will be av
 
 ```
 
-**We can see that output coming from Risc-v compilation and after debugging using Spike command is same** 
+**We can see that output coming from gcc compilation, Risc-v compilation and after debugging using Spike command is same** 
 
 
 **Step:5-->> Finally we use `riscv64-unknown-elf-objdump -d Asic_Application | less` to dump the assembly code in terminal.**
