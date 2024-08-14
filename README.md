@@ -1,7 +1,7 @@
 # Asic-Design-Class
 <details>
  
-<summary> <h1>Task-1</h1> </summary>
+<summary> <h2>Task-1</h2> </summary>
 
 ## Task-1: Write a C code and compile it on gcc compiler.
 
@@ -25,7 +25,7 @@ Execution: After compilation, execute the program with the command `./sum1tox.`
 
 <details>
  
-<summary> <h1>Task-2</h1> </summary>
+<summary> <h2>Task-2</h2> </summary>
 
 ## Task-2: Compile same code and run it onto RISC-V gcc compiler.
 
@@ -52,7 +52,7 @@ Now we can see that our output is same at 1018c location using both gcc and RISC
 
 <details>
  
-<summary> <h1>Task-3</h1> </summary>
+<summary> <h2>Task-3</h2> </summary>
 
 ## Task-3:To find the output of C program on the RISC V Compiler and debug each instruction using the Spike command.
 
@@ -75,7 +75,7 @@ Our first instruction is reg 0. To check it's content we use following code: `re
  
 <details>
  
-<summary> <h1>Task-4</h1> </summary>
+<summary> <h2>Task-4</h2> </summary>
 
 ## Task-4: To run assembly instructions using a given verilog code for a risc-V processor.
 
@@ -217,7 +217,7 @@ This is the waveform of our verilog program:
 
 <details>
  
-<summary> <h1>Task-5</h1> </summary>
+<summary> <h2>Task-5</h2> </summary>
 
 ## Task:5-->> To write an Application in C, compile it with gcc and Risc-v gcc
 **Application:To design a Voting Machine which takes input from users and give final result according to inputs.** 
