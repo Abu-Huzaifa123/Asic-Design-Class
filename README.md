@@ -196,6 +196,80 @@ This is the waveform of our verilog program:
    ![Screenshot 2024-07-28 184650](https://github.com/user-attachments/assets/0f774abb-2bb4-4771-8733-9a26d3261b87)
 
 
+## Task-5
+
+
+> code
+
+``` c
+#include<stdio.h> 
+
+int main() { 
+    char n[10]; 
+    int a[10], csp = 0, bjp = 0, bsp = 0, sp = 0, nota = 0, win = 0;
+
+    again: 
+    printf("\nPlease enter your name:"); 
+    scanf("%s", n);
+
+    printf("\nHello %s please enter your age:", n); 
+    scanf("%d", &a[0]); // a[0] for age.
+
+    if(a[0] >= 18) { 
+        printf("\nYou are eligible for voting!\nLet's start the process."); 
+        printf("\nEnter 1-CONGRESS\nEnter 2-BJP\nEnter 3-BAHUJAN SAMAJWADI PARTY\nEnter 4-SAMAJWADI PARTY\nEnter 5-NOTA\n:"); 
+        scanf("%d", &a[1]); // a[1] for your vote.
+
+        if(a[1] == 1) csp++; 
+        if(a[1] == 2) bjp++; 
+        if(a[1] == 3) bsp++; 
+        if(a[1] == 4) sp++; 
+        if(a[1] == 5) nota++;
+
+        printf("\nAll process is completed! Here is your receipt."); 
+        printf("\nReceipt:\nName: %s\nAge: %d", n, a[0]);
+
+        if(a[1] == 1) printf("\nVote: CONGRESS"); 
+        if(a[1] == 2) printf("\nVote: BJP"); 
+        if(a[1] == 3) printf("\nVote: BAHUJAN SAMAJWADI PARTY"); 
+        if(a[1] == 4) printf("\nVote: SAMAJWADI PARTY"); 
+        if(a[1] == 5) printf("\nVote: NOTA");
+
+        printf("\nThanks for visiting :)");
+
+        nefv: 
+        printf("\nEnter 0 for exit\nEnter 1 for allowing another person to vote:"); 
+        scanf("%d", &a[2]);
+
+        if(a[2] == 0) { 
+            printf("\nResult of voting\nCONGRESS = %d\nBJP = %d\nBAHUJAN SAMAJWADI PARTY = %d\nSAMAJWADI PARTY = %d\nNOTA = %d", csp, bjp, bsp, sp, nota);
+            win = ((csp > bjp) && (csp > bsp) && (csp > sp)) ? csp :
+                  ((bjp > csp) && (bjp > bsp) && (bjp > sp)) ? bjp :
+                  ((bsp > bjp) && (bsp > csp) && (bsp > sp)) ? bsp :
+                  ((sp > bjp) && (sp > csp) && (sp > bsp)) ? sp : nota;
+
+            if(win == bjp) printf("\nThe Winner is BJP!"); 
+            if(win == csp) printf("\nThe Winner is CONGRESS!"); 
+            if(win == bsp) printf("\nThe Winner is BAHUJAN SAMAJWADI PARTY!"); 
+            if(win == sp) printf("\nThe Winner is SAMAJWADI PARTY!"); 
+            if((win == nota) && (bjp == 0) && (csp == 0) && (bsp == 0) && (sp == 0)) 
+                printf("\nNo one got any votes, that's why voting is postponed and voting dates will be available soon!"); 
+            if(win < nota) printf(", but NOTA got more votes than the winner.");
+        } 
+        
+        if(a[2] == 1) 
+            goto again; 
+    } else { 
+        printf("\nYou are not eligible for voting.\nThanks for visiting!"); 
+        goto nefv; 
+    } // Not eligible for voting.
+
+    return 0; 
+}
+```
+
+
+
 
   
 
