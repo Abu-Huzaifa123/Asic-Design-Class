@@ -298,83 +298,8 @@ int main() {
 file:///home/vsduser/Pictures/Screenshot%20from%202024-08-14%2018-37-17.png![image](https://github.com/user-attachments/assets/d8b7ada4-b82c-4cea-b70c-563c66c6be24)
 
 
-**Step:3-->> Compilation using risc-v compiler: For this we used command `cat Application.c`**
 
-> Code
-
-``` c
-
-vsduser@vsduser-VirtualBox:~/Downloads$ cat Application.c 
-#include<stdio.h> 
-
-int main() { 
-    char n[10]; 
-    int a[10], csp = 0, bjp = 0, bsp = 0, sp = 0, nota = 0, win = 0;
-
-    again: 
-    printf("\nPlease enter your name:"); 
-    scanf("%s", n);
-
-    printf("\nHello %s please enter your age:", n); 
-    scanf("%d", &a[0]); // a[0] for age.
-
-    if(a[0] >= 18) { 
-        printf("\nYou are eligible for voting!\nLet's start the process."); 
-        printf("\nEnter 1-CONGRESS\nEnter 2-BJP\nEnter 3-BAHUJAN SAMAJWADI PARTY\nEnter 4-SAMAJWADI PARTY\nEnter 5-NOTA\n:"); 
-        scanf("%d", &a[1]); // a[1] for your vote.
-
-        if(a[1] == 1) csp++; 
-        if(a[1] == 2) bjp++; 
-        if(a[1] == 3) bsp++; 
-        if(a[1] == 4) sp++; 
-        if(a[1] == 5) nota++;
-
-        printf("\nAll process is completed! Here is your receipt."); 
-        printf("\nReceipt:\nName: %s\nAge: %d", n, a[0]);
-
-        if(a[1] == 1) printf("\nVote: CONGRESS"); 
-        if(a[1] == 2) printf("\nVote: BJP"); 
-        if(a[1] == 3) printf("\nVote: BAHUJAN SAMAJWADI PARTY"); 
-        if(a[1] == 4) printf("\nVote: SAMAJWADI PARTY"); 
-        if(a[1] == 5) printf("\nVote: NOTA");
-
-        printf("\nThanks for visiting :)");
-
-        nefv: 
-        printf("\nEnter 0 for exit\nEnter 1 for allowing another person to vote:"); 
-        scanf("%d", &a[2]);
-
-        if(a[2] == 0) { 
-            printf("\nResult of voting\nCONGRESS = %d\nBJP = %d\nBAHUJAN SAMAJWADI PARTY = %d\nSAMAJWADI PARTY = %d\nNOTA = %d", csp, bjp, bsp, sp, nota);
-            win = ((csp > bjp) && (csp > bsp) && (csp > sp)) ? csp :
-                  ((bjp > csp) && (bjp > bsp) && (bjp > sp)) ? bjp :
-                  ((bsp > bjp) && (bsp > csp) && (bsp > sp)) ? bsp :
-                  ((sp > bjp) && (sp > csp) && (sp > bsp)) ? sp : nota;
-
-            if(win == bjp) printf("\nThe Winner is BJP!"); 
-            if(win == csp) printf("\nThe Winner is CONGRESS!"); 
-            if(win == bsp) printf("\nThe Winner is BAHUJAN SAMAJWADI PARTY!"); 
-            if(win == sp) printf("\nThe Winner is SAMAJWADI PARTY!"); 
-            if((win == nota) && (bjp == 0) && (csp == 0) && (bsp == 0) && (sp == 0)) 
-                printf("\nNo one got any votes, that's why voting is postponed and voting dates will be available soon!"); 
-            if(win < nota) printf(", but NOTA got more votes than the winner.");
-        } 
-        
-        if(a[2] == 1) 
-            goto again; 
-    } else { 
-        printf("\nYou are not eligible for voting.\nThanks for visiting!"); 
-        goto nefv; 
-    } // Not eligible for voting.
-
-    return 0; 
-}
-vsduser@vsduser-VirtualBox:~/Downloads$ 
-
-```
-
-
-**Output after running risc-v compilation using `riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o Asic_Application Application.c` command**
+**Step:3-->> Compilation using risc-v by O1 with `riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o Asic_Application Application.c` command**
 
 
 ``` c
@@ -413,7 +338,7 @@ NOTA = 1
 No one got any votes, that's why voting is postponed and voting dates will be available soon!
 ```
 
-**Step:4-->> To debug each instruction using the `spike pk Asic_Application` command**
+**Step:4-->> To debug each instruction using the O1 by `spike pk` command**
 
 ``` c
 vsduser@vsduser-VirtualBox:~/Downloads$ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o Asic_Application
@@ -452,7 +377,7 @@ No one got any votes, that's why voting is postponed and voting dates will be av
 
 ```
 
-**We can see that output coming from gcc compilation, Risc-v compilation and after debugging using Spike command is same** 
+**We can see that output coming from gcc compilation, Risc-v compilation and after debugging by O1 using Spike command is same** 
 
 
 **Step:5-->> Finally we use `riscv64-unknown-elf-objdump -d Asic_Application | less` to dump the assembly code in terminal.**
