@@ -792,10 +792,58 @@ TL-Verilog is fully compatible with traditional Verilog. This means that designe
 
 </details>
  
+<details>
+ 
+<summary> <h2>Task-6</h2> </summary>
+
+## Task:6-->> To convert the TL Verilog code to verilog code using Sandpiper and then use GTKWave for pre-synthesis simulation to verify the design.
+
+**Step:1-->> Install Required Packages:**
+``` c
+
+python3-pip git iverilog gtkwave
+
+cd ~
+
+sudo apt-get install python3-venv
+
+python3 -m venv .venv
+
+source ~/.venv/bin/activate
+
+pip3 install pyyaml click sandpiper-saas
+
+```
+
+![Screenshot 2024-08-26 170747](https://github.com/user-attachments/assets/db66297b-4faa-4412-98df-d8887d541b3c)
+
+**Step:2-->> Clone this repo containing VSDBabySoC design files and testbench by command  `git clone https://github.com/manili/VSDBabySoC.git`.**
+
+**Step:3-->> Replace the rvmyth.tlv file in the VSDBabySoC directory to src/module with the rvmth.tlv using command `cd /home/subhasis/VSDBabySoC`.**
+
+![Screenshot 2024-08-26 171241](https://github.com/user-attachments/assets/be677722-d34f-457d-bbd1-0b22f6861849)
+
+**Step:4-->> Convert .tlv to .v using this converter command `sandpiper-saas -i ./src/module/*.tlv -o rvmyth.v --bestsv --noline -p verilog --outdir ./src/module/`**
+
+**Generated Verilog code with clk_Abu is as shown below:**
+
+![Screenshot 2024-08-26 173556](https://github.com/user-attachments/assets/0aaf57ca-cef1-4816-934b-005c72796a90)
+
+**Step:5-->> Make the pre_synth_sim.vcd using command `make pre_synth_sim`**
+
+**Step:6-->> To compile and simulate RISC-V design run the following code `iverilog -o output/pre_synth_sim.out -DPRE_SYNTH_SIM src/module/testbench.v -I src/include -I src/module`**
+
+**Step:7-->> To open the Simulation file in gtkwave tool use the following command `gtkwave pre_synth_sim.vcd`**
 
 
+![Screenshot 2024-08-26 175726](https://github.com/user-attachments/assets/a030945e-954b-45c2-9ebb-62018d5e5819)
 
-   
+**The below diagram contains my clk signal `clk_Abu` , `reset` signal and `Out[9:0]` of Risc-v Core.**
+
+![Screenshot 2024-08-26 173640](https://github.com/user-attachments/assets/e79b02e4-fb1a-4688-9730-d948bb8254ff)
+
+
+</details>   
 
    
     
