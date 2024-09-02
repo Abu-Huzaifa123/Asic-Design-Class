@@ -909,7 +909,7 @@ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-09-02%202
 
 file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-09-02%2023-01-25.png![image](https://github.com/user-attachments/assets/cff605fe-a0fd-4fff-bcd3-887f2ad705de)
 
-**Below is the output waveforms: We can clearly observe that Vco_in is the input clk for the PLL and clk is the clk output from the PLL. clk_Abu is the clock used inside the Risc-V core and OUT is the analog signal coming out of the DAC unit.**
+**Below is the output waveforms: We can clearly observe that VCO_IN is the input clk for the PLL and CLK is the clk output from the PLL. clk_Abu is the clock used inside the Risc-V core and OUT is the analog signal coming out of the DAC unit.**
 
 
 file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-09-02%2022-58-24.png![image](https://github.com/user-attachments/assets/4db83136-2bcd-436a-ba91-6a3413e128a9)
