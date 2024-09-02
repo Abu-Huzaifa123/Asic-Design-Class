@@ -847,14 +847,78 @@ pip3 install pyyaml click sandpiper-saas
 
    
     
+<details>
+ 
+<summary> <h2>Task-7</h2> </summary>
 
+## Task-7: To convert a digital output from a Verilog file into an analog signal using a DAC and PLL for Risc-V processor. 
     
+**The following commands were used to run out Risc-V core inside the BabySoc:**
+```c
+$ sudo apt-get update
+$ git clone https://github.com/YosysHQ/yosys.git
+$ cd yosys
+$ sudo apt install make (If make is not installed please install it) 
+$ sudo apt-get install build-essential clang bison flex \
+    libreadline-dev gawk tcl-dev libffi-dev git \
+    graphviz xdot pkg-config python3 libboost-system-dev \
+    libboost-python-dev libboost-filesystem-dev zlib1g-dev
+$ make config-gcc
+$ make 
+$ sudo make install
 
 
+```
 
-    
+**Use these commands to install iverilog:**
 
-    
+```c
+
+sudo apt-get update
+sudo apt-get install iverilog
+
+
+```
+
+ **Use these commands to install Gtkwave:**
+
+```c
+
+sudo apt-get update
+sudo apt install gtkwave
+
+```
+
+**After that to clone the BabySoc use this command `git clone https://github.com/Subhasis-Sahu/BabySoC_Simulation/`**
+
+**In final step for functional verification we use these commands:**
+
+```c
+
+cd BabySoC_Simulation
+iverilog -o ./pre_synth_sim.out -DPRE_SYNTH_SIM src/module/testbench.v -I src/include -I src/module/
+./pre_synth_sim.out
+gtkwave pre_synth_sim.vcd
+
+```
+
+**These are the snapshots of my terminal window:**
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-09-02%2023-00-10.png![image](https://github.com/user-attachments/assets/9ad567eb-4cb1-40c9-b0df-5a54c781759a)
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-09-02%2023-01-25.png![image](https://github.com/user-attachments/assets/cff605fe-a0fd-4fff-bcd3-887f2ad705de)
+
+**Below is the output waveforms: We can clearly observe that Vco_in is the input clk for the PLL and clk is the clk output from the PLL. clk_Abu is the clock used inside the Risc-V core and OUT is the analog signal coming out of the DAC unit.**
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-09-02%2022-58-24.png![image](https://github.com/user-attachments/assets/4db83136-2bcd-436a-ba91-6a3413e128a9)
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-09-02%2022-58-48.png![image](https://github.com/user-attachments/assets/c8972622-fc91-43cc-8282-5b6e5482d885)
+
+
+ <details>   
 
 
    
