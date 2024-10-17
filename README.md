@@ -987,10 +987,57 @@ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%202
 file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2020-22-13.png![image](https://github.com/user-attachments/assets/f78b4f9f-5ff0-4f70-b86b-f8ee3b3f5134)
 
 
+## Lab-3: Introduction to Yosys:
 
 
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2023-00-51.png![image](https://github.com/user-attachments/assets/75ebf729-110f-4309-9d95-e5ddcdc54244)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2023-01-08.png![image](https://github.com/user-attachments/assets/ba8699a5-eb65-41c2-a72c-3bf81d4786b2)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2023-01-17.png![image](https://github.com/user-attachments/assets/504f505f-f1d0-451a-bb9c-c03224b2e2de)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2023-01-54.png![image](https://github.com/user-attachments/assets/713b579d-c686-4a10-8aa2-e9637fc7338b)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2023-02-07.png![image](https://github.com/user-attachments/assets/6a210209-16a8-445b-a1cc-a47358717518)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2023-02-17.png![image](https://github.com/user-attachments/assets/b7652e2a-3d28-4813-bc34-a85fe92285eb)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2023-02-29.png![image](https://github.com/user-attachments/assets/9b4101c2-5f7e-4197-8d44-f26a0ca9e427)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2023-02-39.png![image](https://github.com/user-attachments/assets/80b301c6-ef0d-4b76-b0f5-83357c267bf9)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2023-02-47.png![image](https://github.com/user-attachments/assets/54e9232e-a745-4aca-b1ac-ee0ab289f74e)
 
 
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2023-03-07.png![image](https://github.com/user-attachments/assets/25b3ec34-7f11-41df-95b9-d36e44dae03e)
+
+
+**Convert RTL to netlist using command `abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib`**
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2023-12-15.png![image](https://github.com/user-attachments/assets/5098bbb7-9f61-4667-949e-7e27aabd3e23)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2023-12-41.png![image](https://github.com/user-attachments/assets/b0ef1411-8fe9-4038-81d8-3d3fa58937ae)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2023-12-48.png![image](https://github.com/user-attachments/assets/a388b8e6-b4a9-42f2-a06c-af654e94eec7)
+
+**Then to see the netlist we use command `show`**
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2023-18-32.png![image](https://github.com/user-attachments/assets/b3c8d961-ac4b-4795-bfa1-199121b0d59d)
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2023-17-37.png![image](https://github.com/user-attachments/assets/9121ddb0-da25-475d-bc0b-6e72c1ca3558)
+
+
+**Observe netlist using command `write_verilog good_mux_netlist.v`**
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2023-28-09.png![image](https://github.com/user-attachments/assets/6b376987-befe-414e-82ba-0adfc8bfe5b5)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2023-27-09.png![image](https://github.com/user-attachments/assets/f5ebe6e8-ec95-440e-bfb9-f44c65f3b3e9)
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2023-34-31.png![image](https://github.com/user-attachments/assets/a825c1b9-329e-4b1f-aace-e5fcf30814ee)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2023-34-08.png![image](https://github.com/user-attachments/assets/efec039d-3f65-4a61-8e59-d5306acbd976)
 
 </details>
 
