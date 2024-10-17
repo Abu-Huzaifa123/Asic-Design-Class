@@ -918,7 +918,81 @@ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-09-02%202
 file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-09-02%2022-58-48.png![image](https://github.com/user-attachments/assets/c8972622-fc91-43cc-8282-5b6e5482d885)
 
 
- <details>   
+ </details>
+
+
+  <details>
+ 
+<summary> <h2>Task-8</h2> </summary>
+
+## Task-8: Verilog RTL Design and Synthesis.
+
+## Day-1:
+
+### Lab-1: Installation of the files and Repository
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2019-08-13.png![image](https://github.com/user-attachments/assets/6fc3ebcb-8251-4d8d-bf65-1ecc111dce86)
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2019-12-23.png![image](https://github.com/user-attachments/assets/ef6137a2-6ecd-4b62-a353-af32339d6195)
+
+
+## Lab-2: Simulation by iverilog and Gtkwave
+
+**In this lab we have implemented the 2*1 mux using it's verilog code and test bench which is already present in the file that we have clone from the github in lab-1**
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2019-29-00.png![image](https://github.com/user-attachments/assets/f5817a28-e5bf-49a9-95a1-fb8916ff4c16)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2019-31-24.png![image](https://github.com/user-attachments/assets/7355f574-1d3e-4df3-a0f7-f23e3c492c5d)
+
+**We can see the verilog code and test bench by this command**
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2019-46-35.png![image](https://github.com/user-attachments/assets/3af042d9-423b-4fcc-a83c-bcfdb4c190e3)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2019-46-16.png![image](https://github.com/user-attachments/assets/28cf989a-8e62-4f5b-8866-200f9c54ca9a)
+
+## Synthesizer:
+
+**A synthesizer is a crucial tool in the digital design process, responsible for converting RTL (Register Transfer Level) code into a gate-level netlist. The netlist is a detailed representation of the circuit, consisting of logical gates and their connections, ready for physical design stages like place and route. In this flow, Yosys is the synthesizer tool being used, which is an open-source framework for Verilog HDL synthesis. Yosys performs various optimization techniques to produce an efficient gate-level implementation from the RTL code.**
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2019-57-47.png![image](https://github.com/user-attachments/assets/419fada9-c527-431e-89e5-6ee0208bd62c)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2019-58-22.png![image](https://github.com/user-attachments/assets/fab22c0d-9c48-4995-9477-d8f358370245)
+
+
+## Logic Synthesis:
+
+**So, we have an RTL code that describes the design in terms of data flow and operations. To turn this into an actual circuit, we use a process called synthesis. During synthesis, the RTL code is translated into basic logic gates like AND, OR, and NOT, and the connections between these gates are established. This final representation is called a netlist, which defines the structure of the circuit at the gate level.**
+
+**We need synthesis because RTL is more abstract and easier for humans to write and understand, but we need something that can be physically built on a chip. The netlist generated after synthesis can then be used for place and route, where the gates are laid out on a chip and connected. After synthesis, tools can check if the design meets timing requirements, area constraints, and power limits. Without synthesis, we wouldn’t be able to move from high-level design to an actual, manufacturable circuit.**
+
+## Why we need faster cells?
+
+**The combinational delay limits the maximum speed of a digital logic circuit. To minimize this delay, faster cells are needed so the logic can be computed quickly. This ensures that the required logic is generated before the next clock cycle arrives, allowing the circuit to operate efficiently at higher speeds. So we need a setup time for this:**
+
+## Setup Time:
+
+**Setup time is the minimum amount of time before the clock edge during which the input signal (data) to a flip-flop or latch must remain stable. If the data changes within this period, the flip-flop might not capture the correct value, leading to timing violations. Essentially, the data needs to be ready and stable for a certain time before the clock triggers the flip-flop.**
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2020-24-18.png![image](https://github.com/user-attachments/assets/efe113f7-2ae2-4265-b85b-37a9d85496f6)
+
+## Why we need slower cells?
+
+**Slow cells are needed to prevent hold time violations, ensuring the logic is captured correctly after the clock edge. The logic must remain stable for a certain time (hold time), and if faster gates are used, it can lead to hold time violations by changing the data too quickly after the clock signal.**
+
+## Hold Time:
+
+**Hold time is the minimum amount of time after the clock edge during which the input signal (data) must remain stable. If the data changes too soon after the clock edge, the flip-flop may not correctly latch the data. This ensures that the data isn't altered prematurely right after the clock edge has triggered the latch or flip-flop.**
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2020-22-13.png![image](https://github.com/user-attachments/assets/f78b4f9f-5ff0-4f70-b86b-f8ee3b3f5134)
+
+
+
+
+
+
+
+</details>
 
 
    
