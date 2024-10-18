@@ -1039,6 +1039,48 @@ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%202
 
 file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2023-34-08.png![image](https://github.com/user-attachments/assets/efec039d-3f65-4a61-8e59-d5306acbd976)
 
+## Day-2
+
+## Lab-1:
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%2020-09-03.png![image](https://github.com/user-attachments/assets/63f7cb9d-038b-4e46-bfd8-bdc65436ed2e)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%2019-47-45.png![image](https://github.com/user-attachments/assets/2577aa69-d458-4433-86e4-21e1e1f655f9)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%2020-20-46.png![image](https://github.com/user-attachments/assets/3804f68f-b45d-456f-9917-67fe35d45d07)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%2020-21-00.png![image](https://github.com/user-attachments/assets/50b63cfb-1131-463b-a61d-c6f5e9d4ef36)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%2020-21-15.png![image](https://github.com/user-attachments/assets/45110cd8-bdb0-44c6-a8b0-7498c3125470)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%2020-21-25.png![image](https://github.com/user-attachments/assets/0b7f2cc3-ea96-4ff8-afcf-3174edeb7e1e)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%2020-21-34.png![image](https://github.com/user-attachments/assets/7d54c8f9-2600-4865-9a85-55d5343dcb76)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%2020-22-33.png![image](https://github.com/user-attachments/assets/d9e1295f-750d-4eac-9d0a-54b9165d29e8)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%2020-22-42.png![image](https://github.com/user-attachments/assets/f0996480-b04f-45e4-ac83-9531d3035e9d)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%2020-22-57.png![image](https://github.com/user-attachments/assets/e10076ae-77ef-4b65-972d-f7abc3402720)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%2020-23-15.png![image](https://github.com/user-attachments/assets/70671083-a19b-40a4-afec-c87b0035dd8f)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%2020-23-31.png![image](https://github.com/user-attachments/assets/14465d3a-26be-4a11-9a87-50cc9e666f39)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%2020-23-41.png![image](https://github.com/user-attachments/assets/f8eea0bc-71a9-4b0c-a10e-f56a4596b63b)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%2020-23-48.png![image](https://github.com/user-attachments/assets/df08b86a-b58c-4b6c-81ef-a6ca65fdc525)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%2020-24-02.png![image](https://github.com/user-attachments/assets/ab272892-d87c-4fa3-a1ce-52a9557dff5d)
+
+
+
+
+
+
+
+
+
 </details>
 
 
