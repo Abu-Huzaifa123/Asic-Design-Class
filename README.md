@@ -1041,7 +1041,7 @@ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%202
 
 ## Day-2
 
-## Lab-1:
+## Lab-5( Hier synthesis flat synthesis):
 
 file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%2020-09-03.png![image](https://github.com/user-attachments/assets/63f7cb9d-038b-4e46-bfd8-bdc65436ed2e)
 
@@ -1096,6 +1096,141 @@ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%202
 
 
 file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%2020-37-02.png![image](https://github.com/user-attachments/assets/548efeb2-f143-4884-8656-485a640001d4)
+
+
+
+## Labs of Synchronous and Asynchronous D_FFs:
+
+## Asynchronous Reset:
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2018-02-38.png![image](https://github.com/user-attachments/assets/40729c1e-3549-4ace-9dc6-09400f8b90a8)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2018-03-06.png![image](https://github.com/user-attachments/assets/38787308-7943-4136-8942-7d65f2031c50)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2017-59-08.png![image](https://github.com/user-attachments/assets/075362af-5d2e-4595-bcc3-b5c9477d5998)
+
+
+## Asynchronous Set:
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2018-03-32.png![image](https://github.com/user-attachments/assets/42f0f693-0f68-4dce-b9f2-00ba791fb6ce)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2018-02-10.png![image](https://github.com/user-attachments/assets/9dbe839f-96f2-4cd7-b2ed-51e39c5ba330)
+
+
+## Synchronous Reset:
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2018-17-49.png![image](https://github.com/user-attachments/assets/ed19a918-19d7-46e3-8e04-6c9a4936b5b2)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2018-17-27.png![image](https://github.com/user-attachments/assets/b2807b9f-a3ae-48c2-9892-9e54aeb691b5)
+
+## Synthesis using Yosys:
+
+## Asynchronous Reset:
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2019-12-13.png![image](https://github.com/user-attachments/assets/f9b139cd-2ec0-4e4f-9358-9ccc495e255e)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2019-12-29.png![image](https://github.com/user-attachments/assets/4da24ec0-9fbd-4167-be73-3bbadb01adc4)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2019-12-40.png![image](https://github.com/user-attachments/assets/39ee460b-817a-4d55-96f1-b025b7431362)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2019-12-48.png![image](https://github.com/user-attachments/assets/908ae8ae-d90f-4bff-8a02-e011453ac5df)
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2019-12-55.png![image](https://github.com/user-attachments/assets/79725d12-9d3f-4b92-8bd6-43a378331da8)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2019-13-07.png![image](https://github.com/user-attachments/assets/6c4f2385-9e3d-4f84-b593-618d11efc6f1)
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2019-13-15.png![image](https://github.com/user-attachments/assets/d028a389-2847-4240-9e93-2029d4c15a0a)
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2019-13-24.png![image](https://github.com/user-attachments/assets/fa72df71-4c4e-4594-81a9-e68d8c65588a)
+
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2019-13-31.png![image](https://github.com/user-attachments/assets/600d5b0e-8e1f-47bc-b7f9-c20e9aed0b80)
+
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2019-13-46.png![image](https://github.com/user-attachments/assets/f42c8436-44d0-49fb-91a1-3ded3a6acc19)
+
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2019-13-52.png![image](https://github.com/user-attachments/assets/d8c8a1d4-cddd-4165-b753-b740b25e6c05)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2018-40-32.png![image](https://github.com/user-attachments/assets/4a7d0085-2312-4e25-878b-e8f990c54b7a)
+
+
+
+## Asynchronous Set:
+
+
+
+```c
+
+yosys
+read_verilog dff_async_set.v
+synth -top dff_async_set
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+
+
+
+
+```
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2019-44-54.png![image](https://github.com/user-attachments/assets/410d8e01-bf1d-4f34-9c67-13e2f6c8f463)
+
+
+## Synchronous Reset:
+
+```c
+yosys
+read_verilog dff_syncres.v
+synth -top dff_syncres
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+
+```
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2019-50-51.png![image](https://github.com/user-attachments/assets/13aae006-bde4-41c1-b8ff-1171ea4b9f05)
+
+
+
+
+## Multiplication by 2:
+
+```c
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog mult_2.v
+synth -top mul2
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+write_verilog -noattr mul2_net.v
+gvim mul2_net.v
+
+
+
+```
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2019-55-24.png![image](https://github.com/user-attachments/assets/d5ab9255-4def-40e4-9954-3e5cd1469e94)
+
+
+**Generated Netlist:**
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2020-01-04.png![image](https://github.com/user-attachments/assets/8b82b500-4003-4a3a-b097-f94f6f23c099)
+
+
+
+
+
+
+
+
+
 
 
 
