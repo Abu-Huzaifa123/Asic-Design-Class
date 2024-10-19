@@ -1073,9 +1073,29 @@ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%202
 
 file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%2020-24-02.png![image](https://github.com/user-attachments/assets/ab272892-d87c-4fa3-a1ce-52a9557dff5d)
 
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%2020-26-28.png![image](https://github.com/user-attachments/assets/9eccc801-778b-4c8b-b48b-68b409c024a8)
 
 
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2000-15-36.png![image](https://github.com/user-attachments/assets/4370fabc-884e-412b-91d9-fd10ddf9a7d3)
 
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2000-15-52.png![image](https://github.com/user-attachments/assets/29b35246-88c5-44ff-a9a9-4fdf50c376c5)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2000-16-12.png![image](https://github.com/user-attachments/assets/801a8e42-9f7d-4a79-8d5e-cb5f8188bfa3)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2000-16-26.png![image](https://github.com/user-attachments/assets/0755cecf-a53e-4c7c-bb5e-552183e16a01)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2000-16-36.png![image](https://github.com/user-attachments/assets/e6d9847b-c1ca-4bdd-be96-973d1b285458)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2000-16-44.png![image](https://github.com/user-attachments/assets/39139612-f7f1-4576-9382-27e9e6a3ddc3)
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2000-17-15.png![image](https://github.com/user-attachments/assets/a6c2432c-9e92-4718-89c9-666973d4c291)
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%2020-36-21.png![image](https://github.com/user-attachments/assets/36bc6ff4-5578-421d-b0a0-4a110610e055)
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%2020-37-02.png![image](https://github.com/user-attachments/assets/548efeb2-f143-4884-8656-485a640001d4)
 
 
 
