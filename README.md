@@ -1043,6 +1043,10 @@ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%202
 
 ## Lab-5( Hier synthesis flat synthesis):
 
+
+**Yosys Synthesis for Multiple Modules:**
+
+
 file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%2020-09-03.png![image](https://github.com/user-attachments/assets/63f7cb9d-038b-4e46-bfd8-bdc65436ed2e)
 
 file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%2019-47-45.png![image](https://github.com/user-attachments/assets/2577aa69-d458-4433-86e4-21e1e1f655f9)
@@ -1097,6 +1101,19 @@ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%202
 
 file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-18%2020-37-02.png![image](https://github.com/user-attachments/assets/548efeb2-f143-4884-8656-485a640001d4)
 
+##Flattening:
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2020-29-55.png![image](https://github.com/user-attachments/assets/68d6cd5e-20f3-445d-9303-3160ccb87acb)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2020-27-17.png![image](https://github.com/user-attachments/assets/29756deb-7ac6-45cf-a210-ac4ac04f0f7e)
+
+**Generated Netlist:**
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2020-28-57.png![image](https://github.com/user-attachments/assets/f3c0f438-4948-44d2-b331-ee0d5004fb0f)
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2020-29-19.png![image](https://github.com/user-attachments/assets/4ccf6a6e-5bd2-46b7-9c39-4cde5a8ef887)
+
 
 
 ## Labs of Synchronous and Asynchronous D_FFs:
@@ -1122,6 +1139,8 @@ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%201
 file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2018-17-49.png![image](https://github.com/user-attachments/assets/ed19a918-19d7-46e3-8e04-6c9a4936b5b2)
 
 file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2018-17-27.png![image](https://github.com/user-attachments/assets/b2807b9f-a3ae-48c2-9892-9e54aeb691b5)
+
+
 
 ## Synthesis using Yosys:
 
@@ -1216,6 +1235,8 @@ gvim mul2_net.v
 
 ```
 
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2020-05-14.png![image](https://github.com/user-attachments/assets/3ad2b5e6-602d-4dfd-ba03-53dc482ca289)
+
 file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2019-55-24.png![image](https://github.com/user-attachments/assets/d5ab9255-4def-40e4-9954-3e5cd1469e94)
 
 
@@ -1224,16 +1245,30 @@ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%201
 file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2020-01-04.png![image](https://github.com/user-attachments/assets/8b82b500-4003-4a3a-b097-f94f6f23c099)
 
 
+## Multiplication with 9:
+
+```c
+
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog mult_8.v
+synth -top mult8
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+write_verilog -noattr mul8_net.v
+gvim mul8_net.v
+
+```
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2020-16-46.png![image](https://github.com/user-attachments/assets/2b3267ff-3d8f-47af-9321-f1e54387c3fe)
 
 
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2020-13-57.png![image](https://github.com/user-attachments/assets/e885a0a6-3151-4266-a9fa-009664982c1f)
 
 
+**Generated Netlist:**
 
-
-
-
-
-
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2020-16-23.png![image](https://github.com/user-attachments/assets/8fa69059-bab9-4d2e-ba11-e5f3ede4f8b7)
 
 
 </details>
