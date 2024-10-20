@@ -1229,7 +1229,7 @@ synth -top mul2
 abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 write_verilog -noattr mul2_net.v
-gvim mul2_net.v
+!gvim mul2_net.v
 
 
 
@@ -1269,6 +1269,139 @@ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%202
 **Generated Netlist:**
 
 file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2020-16-23.png![image](https://github.com/user-attachments/assets/8fa69059-bab9-4d2e-ba11-e5f3ede4f8b7)
+
+
+
+## Day-3:
+
+## Introduction to optimizations:
+
+## Combinational Logic Optimization
+
+## Lab-6:
+
+## 2 inp and gate
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2012-16-35.png![image](https://github.com/user-attachments/assets/001375bc-017e-4b5d-b2fa-d64f979838c1)
+
+**Commands**
+```c
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog opt_check.v
+synth -top opt_check
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+opt_clean -purge
+show
+
+
+```
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2012-09-39.png![image](https://github.com/user-attachments/assets/66661dcf-2180-4b17-811d-a4f805c5e3b8)
+
+
+**After removing unused logic, optimized logic of the circuit is:**
+
+**Commands**
+```c
+//Design
+module opt_check(input a, input b, output y);
+	assign y = a?b:0;
+endmodule
+
+```
+
+## 2-inp OR gate:
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2012-27-56.png![image](https://github.com/user-attachments/assets/8bcde222-39cb-44c2-ae4f-e46fe3be0122)
+
+
+```c
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog opt_check2.v
+synth -top opt_check2
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+opt_clean -purge
+show
+
+```
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2012-25-52.png![image](https://github.com/user-attachments/assets/8280b859-19e3-47c3-8585-f5867aec8bf2)
+
+
+**After removing unused logic, optimized logic of the circuit is:**
+
+```c
+//Design
+module opt_check2(input a, input b, output y);
+	assign y = a?1:b;
+endmodule
+
+```
+
+
+## 3-inp and gate:
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2012-30-12.png![image](https://github.com/user-attachments/assets/2fc6cd1a-6b1f-4f61-9aaf-d27980e2af51)
+
+**Commands**
+
+```c
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog opt_check3.v
+synth -top opt_check3
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+opt_clean -purge
+show
+
+```
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2012-29-52.png![image](https://github.com/user-attachments/assets/f376fb7c-a9eb-4d52-8438-db3dd49e0e4e)
+
+
+**After removing unused logic, optimized logic of the circuit is:**
+
+```c
+//Design
+module opt_check2(input a, input b, input c, output y);
+	assign y = a?(b?c:0):0;
+endmodule
+
+```
+
+## 2-inp xnor gate:
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2012-32-04.png![image](https://github.com/user-attachments/assets/e96817bb-6e2c-4d12-81a6-f2a7a9bc7809)
+
+**Commands**
+
+```c
+
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog opt_check4.v
+synth -top opt_check4
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+opt_clean -purge
+show
+```
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2012-31-48.png![image](https://github.com/user-attachments/assets/d136433a-4039-454a-8b57-357e4940a5f4)
+
+**After removing unused logic, optimized logic of the circuit is:**
+
+```c
+//Design
+module opt_check2(input a, input b, input c, output y);
+	assign y = a ? (b ? ~c : c) : ~c;
+endmodule
+```
+
+
+
+
+
+
 
 
 </details>
