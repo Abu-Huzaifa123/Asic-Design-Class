@@ -1583,7 +1583,150 @@ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%202
 file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2020-02-45.png![image](https://github.com/user-attachments/assets/1dc3a0b9-64a8-4199-82a6-cebf6fee742a)
 
 
+## Day-4:
 
+## 2x1 mux design using Ternary Operator:
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2022-18-09.png![image](https://github.com/user-attachments/assets/5fd9a9e9-8e32-4aa7-926a-f95777e936db)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2022-14-20.png![image](https://github.com/user-attachments/assets/e0115898-33b8-4f83-93fc-50b88735512e)
+
+
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2022-03-52.png![image](https://github.com/user-attachments/assets/fbe5935d-25ac-40d3-8451-6f619b6c2154)
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2022-03-18.png![image](https://github.com/user-attachments/assets/16b8a172-f92f-4d89-8799-75d98de3c237)
+
+**Commands**
+
+```c
+
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog ternary_operator_mux.v
+synth -top ternary_operator_mux
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+opt_clean -purge
+write_verilog -noattr ternary_operator_mux_net.v
+!gvim ternary_operator_mux_net.v
+show
+
+```
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2022-09-02.png![image](https://github.com/user-attachments/assets/cb9e7962-0596-4aac-b5f7-72ba643616ab)
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2022-09-16.png![image](https://github.com/user-attachments/assets/70eaa25f-5a54-4112-9008-14bbb82427f5)
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2022-06-00.png![image](https://github.com/user-attachments/assets/266f458a-070e-4ffc-ad8f-0eddadb34dd5)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2022-06-20.png![image](https://github.com/user-attachments/assets/7547d69d-99ef-49ef-a345-2350bbfbc26c)
+
+
+**Ternary Operator mux gate level synthesis**
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2022-18-09.png![image](https://github.com/user-attachments/assets/006fec0c-1f70-4ad9-bc8a-93501206aca5)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2022-12-33.png![image](https://github.com/user-attachments/assets/d7011382-5480-4f32-8204-106595dcccbd)
+
+
+## Bad 2*1 mux:
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2022-30-52.png![image](https://github.com/user-attachments/assets/da292824-eaed-4eb8-9f4c-5d51ecb5e400)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2022-30-37.png![image](https://github.com/user-attachments/assets/60261d57-d7dc-42ef-8534-2c1e80d71a6e)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2022-37-57.png![image](https://github.com/user-attachments/assets/7f8cd5b0-7243-4fd6-9fa6-fd93f7c5d240)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2022-36-36.png![image](https://github.com/user-attachments/assets/5717bc3b-bb93-40ce-8cad-28439da8e27f)
+
+
+**We can observe that the output y is changing only when select line is changing, here we can see that when select line is 1 then y should follow input i1, here in this region i1 is changing from 1 to 0 but y is giving only 1 in this region, so it is a bad buffer.**
+
+**Commands**
+
+```c
+
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog bad_mux.v
+synth -top bad_mux
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+opt_clean -purge
+write_verilog -noattr bad_mux_net.v
+!gvim bad_mux_net.v
+show
+
+```
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2022-52-44.png![image](https://github.com/user-attachments/assets/cbd96518-c594-479c-b347-5a4448e3c712)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2022-52-52.png![image](https://github.com/user-attachments/assets/dab543e4-06f5-4018-96a9-85e9e9eb0846)
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2022-51-35.png![image](https://github.com/user-attachments/assets/6ac858d1-ceed-4d0f-85da-e382e94fb175)
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2022-52-01.png![image](https://github.com/user-attachments/assets/800f62dc-964c-43ea-899d-13d680acc604)
+
+
+**Bad mux gate level synthesis.**
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2022-54-34.png![image](https://github.com/user-attachments/assets/4134bae6-7f99-4650-9fcc-ff4626c9fc38)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2022-54-17.png![image](https://github.com/user-attachments/assets/f5db3f61-abc7-4a24-8655-11cf0baa69b7)
+
+## Blocking Caveat:
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2023-03-56.png![image](https://github.com/user-attachments/assets/6d72233d-b92c-45f4-99ff-c66d5ed08552)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2023-03-42.png![image](https://github.com/user-attachments/assets/d09170bd-777f-4f83-aa0a-a0349c272a35)
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2023-13-31.png![image](https://github.com/user-attachments/assets/14ea4fe6-eae7-46a6-9769-9cad88e01a2a)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2023-11-57.png![image](https://github.com/user-attachments/assets/0a28d8b4-61a9-42df-8d7e-f8e668aca332)
+
+
+**Commands**
+
+```c
+
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog blocking_caveat.v
+synth -top blocking_caveat
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+opt_clean -purge
+write_verilog -noattr blocking_caveat_net.v
+!gvim blocking_caveat_net.v
+show
+
+```
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2023-19-26.png![image](https://github.com/user-attachments/assets/91e52a1e-0686-4d4d-b20e-5fde84225b1b)
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2023-19-34.png![image](https://github.com/user-attachments/assets/2a5d7326-9ab3-40f6-9ac4-17e7e9514dc6)
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2023-18-10.png![image](https://github.com/user-attachments/assets/f216ec85-c005-48f2-815f-d4547043d21a)
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2023-18-53.png![image](https://github.com/user-attachments/assets/8e37868c-8f94-4277-b1e5-ebe0dcd1a4e4)
+
+
+**Blocking Caveat gate level synthesis.**
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2023-28-07.png![image](https://github.com/user-attachments/assets/bfe71280-0d25-4556-b186-54d21a49cfd6)
+
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2023-27-49.png![image](https://github.com/user-attachments/assets/f2358979-b524-47a6-af0c-5a4f7613f182)
 
 
 </details>
