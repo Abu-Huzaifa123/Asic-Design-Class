@@ -925,11 +925,14 @@ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-09-02%202
  
 <summary> <h2>Task-8</h2> </summary>
 
+
+
+<details>
+    <summary>Day-1:</summary>
+
 ## Task-8: Verilog RTL Design and Synthesis.
 
-## Day-1:
-
-### Lab-1: Installation of the files and Repository
+### Lab: Installation of the files and Repository
 
 file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2019-08-13.png![image](https://github.com/user-attachments/assets/6fc3ebcb-8251-4d8d-bf65-1ecc111dce86)
 
@@ -937,7 +940,7 @@ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%201
 file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2019-12-23.png![image](https://github.com/user-attachments/assets/ef6137a2-6ecd-4b62-a353-af32339d6195)
 
 
-## Lab-2: Simulation by iverilog and Gtkwave
+## Lab: Simulation by iverilog and Gtkwave
 
 **In this lab we have implemented the 2*1 mux using it's verilog code and test bench which is already present in the file that we have clone from the github in lab-1**
 
@@ -987,7 +990,7 @@ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%202
 file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2020-22-13.png![image](https://github.com/user-attachments/assets/f78b4f9f-5ff0-4f70-b86b-f8ee3b3f5134)
 
 
-## Lab-3: Introduction to Yosys:
+## Lab: Introduction to Yosys:
 
 
 file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2023-00-51.png![image](https://github.com/user-attachments/assets/75ebf729-110f-4309-9d95-e5ddcdc54244)
@@ -1039,9 +1042,12 @@ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%202
 
 file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-17%2023-34-08.png![image](https://github.com/user-attachments/assets/efec039d-3f65-4a61-8e59-d5306acbd976)
 
-## Day-2
+</details>
+	
+<details>
+    <summary>Day-2:</summary>
 
-## Lab-5( Hier synthesis flat synthesis):
+## Lab- Hier synthesis flat synthesis:
 
 
 **Yosys Synthesis for Multiple Modules:**
@@ -1270,15 +1276,18 @@ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%202
 
 file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-19%2020-16-23.png![image](https://github.com/user-attachments/assets/8fa69059-bab9-4d2e-ba11-e5f3ede4f8b7)
 
+</details>
 
 
-## Day-3:
+
+<details>
+    <summary>Day-3:</summary>
 
 ## Introduction to optimizations:
 
 ## Combinational Logic Optimization
 
-## Lab-6:
+## Lab:
 
 ## 2 inp and gate
 
@@ -1583,7 +1592,12 @@ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%202
 file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2020-02-45.png![image](https://github.com/user-attachments/assets/1dc3a0b9-64a8-4199-82a6-cebf6fee742a)
 
 
-## Day-4:
+</details>
+
+<details>
+    <summary>Day-4:</summary>
+	
+
 
 ## 2x1 mux design using Ternary Operator:
 
@@ -1728,6 +1742,7 @@ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%202
 
 file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2023-27-49.png![image](https://github.com/user-attachments/assets/f2358979-b524-47a6-af0c-5a4f7613f182)
 
+</details>
 
 </details>
 
