@@ -1397,6 +1397,84 @@ module opt_check2(input a, input b, input c, output y);
 endmodule
 ```
 
+## D-Flipflop with Asynchronous Reset (active low):
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2018-10-02.png![image](https://github.com/user-attachments/assets/49dd3519-2cd7-4696-9f11-3f0dba3a1cec)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2018-19-42.png![image](https://github.com/user-attachments/assets/32f539bd-53fb-4a99-b08b-6e336a6306d7)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2018-09-22.png![image](https://github.com/user-attachments/assets/e09d2068-3ec7-47e7-a38b-a2126e76ef2b)
+
+**Commands**
+
+```c
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_const1.v
+synth -top dff_const1
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+
+```
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2018-12-23.png![image](https://github.com/user-attachments/assets/1c83f234-5285-4330-a628-1cee7300aa83)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2018-12-29.png![image](https://github.com/user-attachments/assets/e992b6e2-5d79-46fd-b841-a48b5edcd9a8)
+
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2018-11-39.png![image](https://github.com/user-attachments/assets/f109a7b2-87eb-4328-8804-b265105575fd)
+
+
+## D-Flipflop with Asynchronous Reset (active high):
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2018-16-16.png![image](https://github.com/user-attachments/assets/150491c6-ea01-4984-8736-2a825ee63bf5)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2018-15-22.png![image](https://github.com/user-attachments/assets/fd61f6fd-418d-465c-a1ae-9550dd654130)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2018-13-45.png![image](https://github.com/user-attachments/assets/bdead2b0-a923-42f2-948f-9736910b1866)
+
+**Commands**
+```c
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_const2.v
+synth -top dff_const2
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+
+```
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2018-40-48.png![image](https://github.com/user-attachments/assets/0aab8804-a98c-4a77-bb72-fce2c2cbeab8)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2018-41-00.png![image](https://github.com/user-attachments/assets/c330db36-16b0-452d-b448-0b3bb79d0e62)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%2018-40-32.png![image](https://github.com/user-attachments/assets/c981f279-ed0e-4be6-981c-305705f4f6ae)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
