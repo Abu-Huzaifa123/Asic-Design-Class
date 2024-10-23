@@ -1744,44 +1744,89 @@ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-20%202
 
 </details>
 
+
+
 </details>
 
 
+
+<details>
+ 
+<summary> <h2>Task-9</h2> </summary>
+
+## Task-9: Synthesize RISC-V and compare output with functional simulations.
+
+
+**The following was the digital and its corresponding analog output on the RISC V processor are as follows:**
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-24%2002-00-09.png![image](https://github.com/user-attachments/assets/133ea712-5b9e-4fbc-bb75-a4d03bbe265a)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-24%2001-59-25.png![image](https://github.com/user-attachments/assets/3ad172d7-03f6-4f38-a25c-4a42458dd5f1)
+
+**We now need to synthesize the RTL and find out the corresponding output. We will use yosys to synthesize the output.**
+
+
+**The following commands were used to generate the netlist, it is given in the snapshots:** 
+
    
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-24%2000-18-20.png![image](https://github.com/user-attachments/assets/e1798d2e-4859-468b-b142-6e6b01f1c61a)
 
-    
-
+ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-24%2000-18-40.png![image](https://github.com/user-attachments/assets/bc94036f-ae18-4dc0-8ec1-537d87e068f9)
    
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-24%2000-19-04.png![image](https://github.com/user-attachments/assets/0a73a173-4442-4f17-ad10-a696f256a782)
 
-   
-
-
-
-
+ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-24%2000-20-55.png![image](https://github.com/user-attachments/assets/2ba77a80-1b78-4d12-a756-2abc6c1a70ce)
   
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-24%2000-21-04.png![image](https://github.com/user-attachments/assets/3f441d69-5979-4865-8ece-6874386048b4)
 
-  
+  file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-24%2000-21-10.png![image](https://github.com/user-attachments/assets/6e9993da-b9ba-4252-9f2b-64bce6a32498)
+ 
 
-  
+The generated netlist verilog is shown below :
 
-
-  
-
-  
-
-
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-24%2001-07-15.png![image](https://github.com/user-attachments/assets/eff3cf95-e192-49d3-9b5b-3545e691d309)
 
   
 
 
+**Top Module "vsdbabysoc" was edited to integrated the generated netlist verilog:** 
   
 
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-24%2001-03-58.png![image](https://github.com/user-attachments/assets/864c4311-2feb-4593-b251-5e8f62be15d1)
+  
 
+**Now change the testbench to:**
+  
 
-
+ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-24%2001-03-49.png![image](https://github.com/user-attachments/assets/a0a59655-63a3-4f9b-874e-2787f3906b2f)
  
 
 
+**To run new SOC, following commands are used which includes the synthesized RVMYTH core:**
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-24%2001-43-10.png![image](https://github.com/user-attachments/assets/e98f6611-433c-4227-b022-cae7078be22e)
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-24%2001-43-44.png![image](https://github.com/user-attachments/assets/572991db-427b-4ad9-9016-4f5ea109504c)
+
+  
+
+
+  
+
+**The Gtkwave is as shown below:**
+
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-24%2001-28-55.png![image](https://github.com/user-attachments/assets/175648ac-f3d6-4e8c-b768-77b3a7567281)
+
+
+
+**The standard cell highlighted in the image is "09330" the same cell is available in the code as shown in the code:**
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-24%2000-42-33.png![image](https://github.com/user-attachments/assets/79162f80-560d-48b1-839d-bd12b767122d)
+
+**Conclusion:- From the above output we can observe a sawtooth waveform and thus we can say that the output which we get from GLS is same as that of the functional simulation.**
 
 
 
