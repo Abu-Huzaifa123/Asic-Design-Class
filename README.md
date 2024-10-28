@@ -1828,5 +1828,35 @@ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-24%200
 
 **Conclusion:- From the above output we can observe a sawtooth waveform and thus we can say that the output which we get from GLS is same as that of the functional simulation.**
 
+</details>
+
+<details>
+ 
+<summary> <h2>Task-10</h2> </summary>
+
+## Task-10: Static Timing Analysis for a RISC-V Core with OpenSTA
+
+### Given:
+
+```c
+Clock period = 9.4 ns
+Setup uncertainty and clock transition will be 5% of clock
+Hold uncertainty and data transition will be 8% of clock.
+```
+
+### In this task Static timing analysis was performed on the RV core netlist. We run the following commands to perform the analysis: 
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-28%2023-26-43.png![image](https://github.com/user-attachments/assets/d9e1ee62-8aa9-48c7-a984-a74b06f9b2c6)
+
+### Maximum delay(Setup report)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-28%2023-27-05.png![image](https://github.com/user-attachments/assets/660118ee-3d6f-4cf6-99dc-7f4447ffd5a0)
 
 
+### Minimum delay(Hold report)
+
+file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-28%2023-27-20.png![image](https://github.com/user-attachments/assets/f8c60531-59ae-4fb3-9878-8ed0c1bae986)
+
+
+
+</details>
