@@ -1860,3 +1860,99 @@ file:///home/abu-huzaifa/Pictures/Screenshots/Screenshot%20from%202024-10-28%202
 
 
 </details>
+
+
+<details>
+ 
+<summary> <h2>Task-11</h2> </summary>
+
+## Task-11: PVT Corner Analysis using OpenSTA
+
+**Contents of tickle script for automating STA procedure:**
+
+```c
+set list_of_lib_files(1) "sky130_fd_sc_hd__ff_100C_1v65.lib"
+set list_of_lib_files(2) "sky130_fd_sc_hd__ff_100C_1v95.lib"
+set list_of_lib_files(3) "sky130_fd_sc_hd__ff_n40C_1v56.lib"
+set list_of_lib_files(4) "sky130_fd_sc_hd__ff_n40C_1v65.lib"
+set list_of_lib_files(5) "sky130_fd_sc_hd__ff_n40C_1v76.lib"
+set list_of_lib_files(6) "sky130_fd_sc_hd__ff_n40C_1v95.lib"
+set list_of_lib_files(7) "sky130_fd_sc_hd__ss_100C_1v40.lib"
+set list_of_lib_files(8) "sky130_fd_sc_hd__ss_100C_1v60.lib"
+set list_of_lib_files(9) "sky130_fd_sc_hd__ss_n40C_1v28.lib"
+set list_of_lib_files(10) "sky130_fd_sc_hd__ss_n40C_1v35.lib"
+set list_of_lib_files(11) "sky130_fd_sc_hd__ss_n40C_1v40.lib"
+set list_of_lib_files(12) "sky130_fd_sc_hd__ss_n40C_1v44.lib"
+set list_of_lib_files(13) "sky130_fd_sc_hd__ss_n40C_1v60.lib"
+set list_of_lib_files(14) "sky130_fd_sc_hd__ss_n40C_1v76.lib"
+set list_of_lib_files(15) "sky130_fd_sc_hd__tt_025C_1v80.lib"
+set list_of_lib_files(16) "sky130_fd_sc_hd__tt_100C_1v80.lib"
+
+for {set i 1} {$i <= [array size list_of_lib_files]} {incr i} {
+read_liberty /home/abu-huzaifa/BabySoC_Simulation/lib/$list_of_lib_files($i)
+read_verilog /home/abu-huzaifa/BabySoC_Simulation/
+link_design rvmyth
+read_sdc /home/abu-huzaifa/VSDBabySoC/src/sdc/vsdbabysoc_synthesis.sdc
+check_setup -verbose
+report_checks -path_delay min_max -fields {nets cap slew input_pins fanout} -digits {4} > /home/abu-huzaifa/VSDBabySoC/src/sta_output/min_max_$list_of_lib_files($i).txt
+
+exec echo "$list_of_lib_files($i)" >> /home/abu-huzaifa/VSDBabySoC/src/sta_output/sta_worst_max_slack.txt
+report_worst_slack -max -digits {4} >> /home/abu-huzaifa/VSDBabySoC/src/sta_output/sta_worst_max_slack.txt
+
+exec echo "$list_of_lib_files($i)" >> /home/abu-huzaifa/VSDBabySoC/src/sta_output/sta_worst_min_slack.txt
+report_worst_slack -min -digits {4} >> /home/abu-huzaifa/VSDBabySoC/src/sta_output/sta_worst_min_slack.txt
+
+exec echo "$list_of_lib_files($i)" >> /home/abu-huzaifa/VSDBabySoC/src/sta_output/sta_tns.txt
+report_tns -digits {4} >> /home/abu-huzaifa/VSDBabySoC/src/sta_output/sta_tns.txt
+
+exec echo "$list_of_lib_files($i)" >> /home/abu-huzaifa/VSDBabySoC/src/sta_output/sta_wns.txt
+report_wns -digits {4} >> /home/abu-huzaifa/VSDBabySoC/src/sta_output/sta_wns.txt
+}
+```
+
+**Constraint file:**
+
+```c
+create_clock -name CLK -period 9.4 [get_ports CLK]
+set_clock_uncertainty [expr 0.05 * 9.4] -setup [get_clocks CLK]
+set_clock_uncertainty [expr 0.08 * 9.4] -hold [get_clocks CLK]
+set_clock_transition [expr 0.05 * 9.4] [get_clocks CLK]
+set_input_transition [expr 0.08 * 9.4] [all_inputs]
+
+set_input_transition [expr $PERIOD * 0.08] [get_ports ENB_CP]
+set_input_transition [expr $PERIOD * 0.08] [get_ports ENB_VCO]
+set_input_transition [expr $PERIOD * 0.08] [get_ports REF]
+set_input_transition [expr $PERIOD * 0.08] [get_ports VCO_IN]
+set_input_transition [expr $PERIOD * 0.08] [get_ports VREFH]
+
+```
+## Output for different library files
+
+
+
+![Screenshot 2024-11-04 221136](https://github.com/user-attachments/assets/68129df1-c363-4e1e-bad7-31b6c6580801)
+
+## Total Negative Slack
+
+![Screenshot 2024-11-05 020245](https://github.com/user-attachments/assets/ca14a96b-19cb-4f03-b942-fce342281b19)
+
+## Worst Negative Slack (WNS)
+
+![WhatsApp Image 2024-11-04 at 19 47 57_8683ce16](https://github.com/user-attachments/assets/27e6574d-dd4b-41b6-a641-22c9592cafab)
+
+## Worst Setup(max) Slack
+
+![WhatsApp Image 2024-11-04 at 19 47 57_90deec03](https://github.com/user-attachments/assets/385d7a05-f561-4a74-ae65-bfc3a7e65837)
+
+
+## Worst Hold(min) Slack
+
+![WhatsApp Image 2024-11-04 at 19 47 58_14070cb5](https://github.com/user-attachments/assets/f6cf68e3-b71e-4744-96f8-e13f008881a5)
+
+
+
+
+
+</details>
+
+
