@@ -2010,7 +2010,7 @@ file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2000-08-45.png![ima
 Flop Ratio = 1613/14876 = 0.108429685
 
 ```
-<details>
+</details>
 
 <details>
     <summary>Day-2:</summary>
@@ -2057,24 +2057,6 @@ file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2000-32-06.png![ima
 file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2000-37-11.png![image](https://github.com/user-attachments/assets/bc1e314b-1826-4060-afb3-b013ba89be2b)
 
 file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2000-37-21.png![image](https://github.com/user-attachments/assets/3df5d3e8-414b-4336-baa8-41c23475e7a3)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<details>
 
 </details>
 
