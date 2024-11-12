@@ -1956,3 +1956,125 @@ set_input_transition [expr $PERIOD * 0.08] [get_ports VREFH]
 </details>
 
 
+
+
+<details>
+ 
+<summary> <h2>Task-12</h2> </summary>
+
+## Task-12:  Complete the Advanced Physical Design using OpenLane workshop on VSDIAT platform, and create an inverter with your name in it. Document all labs.
+
+<details>
+    <summary>Day-1:</summary>
+
+## Inception of open-source EDA, OpenLANE and Sky130 PDK.
+
+```c
+# Change directory to openlane flow directory
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+# alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
+# Since we have aliased the long command to 'docker' we can invoke the OpenLANE flow docker sub-system by just running this command
+docker
+
+# Now that we have entered the OpenLANE flow contained docker sub-system we can invoke the OpenLANE flow in the Interactive mode using the following command
+./flow.tcl -interactive
+
+# Now that OpenLANE flow is open we have to input the required packages for proper functionality of the OpenLANE flow
+package require openlane 0.9
+
+# Now the OpenLANE flow is ready to run any design and initially we have to prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
+prep -design picorv32a
+
+# Now that the design is prepped and ready, we can run synthesis using following command
+run_synthesis
+
+```
+
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-12%2023-57-54.png![image](https://github.com/user-attachments/assets/49a4ae9e-d151-44ce-a3bb-a2c2bc597c97)
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2000-00-33.png![image](https://github.com/user-attachments/assets/8ecb5c5a-1971-40f6-b858-652eda110a95)
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2000-11-35.png![image](https://github.com/user-attachments/assets/650dd359-088e-4fa8-90a8-c23f5f74e43e)
+
+
+### Calculate flop ratio:
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2000-08-27.png![image](https://github.com/user-attachments/assets/e65a531c-4d15-4793-b1a9-88988c9fb448)
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2000-08-45.png![image](https://github.com/user-attachments/assets/af017c9e-086f-46af-8fe2-66e4922f6b61)
+
+```c
+
+Flop Ratio = 1613/14876 = 0.108429685
+
+```
+<details>
+
+<details>
+    <summary>Day-2:</summary>
+
+## Good Floorpan vs Bad Floorplan and Introduction to Library Cell
+
+**Tasks: Perform the floorplanning of the 'picorv32a' design using the OpenLANE flow, ensuring all necessary outputs are generated. Calculate the die area in microns based on the values in the floorplan definition. Next, load the generated floorplan definition into the Magic tool and analyze the floorplan. Afterward, perform a congestion-aware placement of the 'picorv32a' design using the OpenLANE flow and generate the corresponding outputs. Finally, load the placement definition into Magic and examine the placement.**
+
+### 1. Run 'picorv32a' design floorplan using OpenLANE flow and generate necessary outputs.
+
+```c
+
+# Change directory to openlane flow directory
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+# alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
+# Since we have aliased the long command to 'docker' we can invoke the OpenLANE flow docker sub-system by just running this command
+docker
+# Now that we have entered the OpenLANE flow contained docker sub-system we can invoke the OpenLANE flow in the Interactive mode using the following command
+./flow.tcl -interactive
+
+# Now that OpenLANE flow is open we have to input the required packages for proper functionality of the OpenLANE flow
+package require openlane 0.9
+
+# Now the OpenLANE flow is ready to run any design and initially we have to prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
+prep -design picorv32a
+
+# Now that the design is prepped and ready, we can run synthesis using following command
+run_synthesis
+
+# Now we can run floorplan
+run_floorplan
+
+```
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2000-31-59.png![image](https://github.com/user-attachments/assets/e77ba02e-d2fe-4ce7-af43-5a1da816129c)
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2000-32-06.png![image](https://github.com/user-attachments/assets/958fb543-e9be-46d8-96ad-4475357d15d3)
+
+
+**2. Calculate the die area in microns from the values in floorplan def.**
+
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2000-37-11.png![image](https://github.com/user-attachments/assets/bc1e314b-1826-4060-afb3-b013ba89be2b)
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2000-37-21.png![image](https://github.com/user-attachments/assets/3df5d3e8-414b-4336-baa8-41c23475e7a3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<details>
+
+</details>
+
