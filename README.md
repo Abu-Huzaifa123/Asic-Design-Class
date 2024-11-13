@@ -2315,8 +2315,105 @@ file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2001-05-45.png![ima
 
 Width of standard cell = 1.77 um = 0.58 ∗ 3 
 
+2. Save the finalized layout with custom name and open it. Command for tkcon window to save the layout with custom name.
+
+```c
+save sky130_vsdinv.mag
+magic -T sky130A.tech sky130_vsdinv.mag &
+
+```
+Now, type the following command in tkcon window:
+
+```c
+lef write
+```
+Snapshot of newly created lef file
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2002-17-35.png![image](https://github.com/user-attachments/assets/6c022fb1-cc53-4930-a625-9ba07cdfef22)
+
+4. Copy the newly generated lef and associated required lib files to 'picorv32a' design 'src' directory. Commands to copy necessary files to 'picorv32a' design 'src' directory.
+
+```c
+cp sky130_vsdinv.lef ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+ls ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+cp libs/sky130_fd_sc_hd__* ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+ls ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+
+```
+
+Snapshot of commands:
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2001-53-36.png![image](https://github.com/user-attachments/assets/51494c4d-f534-4e62-a68a-48e8e12c9c30)
+
+5. Edit 'config.tcl' to change lib file and add the new extra lef into the openlane flow. Commands to be added to config.tcl to include our custom cell in the openlane flow.
+
+```c
+set ::env(LIB_SYNTH) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
+set ::env(LIB_FASTEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__fast.lib"
+set ::env(LIB_SLOWEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__slow.lib"
+set ::env(LIB_TYPICAL) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
+set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/src/*.lef]
+
+```
+
+Edit to config.tcl config.tcl to include the added lef and change library to ones we added in src directory.
+
+6. Run openlane flow synthesis with newly inserted custom inverter cell. Commands to invoke the OpenLANE flow include new lef and perform synthesis.
+
+```c
+cd Desktop/work/tools/openlane_working_dir/openlane
+-u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
+docker
+
+```
+```c
+./flow.tcl -interactive
+package require openlane 0.9
+prep -design picorv32a
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+run_synthesis
+```
+Snapshots of commands:
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2002-03-50.png![image](https://github.com/user-attachments/assets/f22773d5-318f-4714-9217-0715d86e62c3)
+
+    
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2002-11-11.png![image](https://github.com/user-attachments/assets/6f9e9d8e-e207-4913-a198-2f7ae5b29734)
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2002-11-44.png![image](https://github.com/user-attachments/assets/3ca3d8a6-2ad4-4c2f-bb98-3bd34745ac44)
+   
+7. Remove/reduce the newly introduced violations with the introduction of custom inverter cell by modifying design parameters. Noting down current design values generated before modifying parameters to improve timing.
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2002-13-36.png![image](https://github.com/user-attachments/assets/fe399a51-5248-43ee-b426-9f0e90fc26c9)
+   
+Commands to view and change parameters to improve timing and run synthesis
+
+```c
+prep -design picorv32a -tag 24-03_10-03 -overwrite
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+echo $::env(SYNTH_STRATEGY)
+set ::env(SYNTH_STRATEGY) "DELAY 3"
+echo $::env(SYNTH_BUFFERING)
+echo $::env(SYNTH_SIZING)
+
+set ::env(SYNTH_SIZING) 1
+
+echo $::env(SYNTH_DRIVING_CELL)
+run_synthesis
+
+```
+ Screenshot of merged.lef in tmp directory with our custom inverter as macro
+ 
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2004-25-49.png![image](https://github.com/user-attachments/assets/3343c555-c80a-45b0-b24c-7ac6fb386967)
 
 
+Screenshots of commands run:
 
-    </details>  
+
+    
+    
+    
+</details>  
   
