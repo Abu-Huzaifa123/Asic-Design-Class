@@ -2173,6 +2173,86 @@ file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2018-47-43.png![ima
 
 file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2018-49-50.png![image](https://github.com/user-attachments/assets/a6caa6f3-5f6b-4566-a45e-e542678f1a53)
 
+### Deleting necessary layout part to see DRC error
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2022-24-56.png![image](https://github.com/user-attachments/assets/a4eb410a-f3f4-4214-a902-5e26a7dd1ab7)
+
+
+**3. Spice extraction of inverter in magic. Commands for spice extraction of the custom inverter layout to be used in tkcon window of magic**
+
+```c
+pwd
+extract all
+ext2spice cthresh 0 rthresh 0
+ext2spice
+
+```
+**Screenshot of tkcon window after running above commands**
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2019-44-28.png![image](https://github.com/user-attachments/assets/09aec8c6-4cb7-4c22-8795-2a2fd1342698)
+
+
+**Screenshot of created spice file**
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2020-32-21.png![image](https://github.com/user-attachments/assets/cdd73e13-c665-4eb8-b80b-b04e744d654b)
+
+
+4. Editing the spice model file for analysis through simulation. Measuring unit distance in layout grid
+
+5. Post-layout ngspice simulations. Commands for ngspice simulation
+
+```c
+# Command to directly load spice file for simulation to ngspice
+ngspice sky130_inv.spice
+
+# Now that we have entered ngspice with the simulation spice file loaded we just have to load the plot
+plot y vs time a
+```
+
+**Ngspice run snapshot**
+
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2020-39-42.png![image](https://github.com/user-attachments/assets/5654eb99-43f6-4b93-8bc1-f392f9f9fc5f)
+
+ **Generated plot snapshot**
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2020-40-34.png![image](https://github.com/user-attachments/assets/79c82151-011a-47a7-a5ee-0a6b8bc84980)
+
+
+Rise transition time calculation
+
+Rise transition time = Time taken for output to rise to 80% - Time taken for output to rise to 20%
+
+20% of output = 660 mV 80% of output = 2.64 V
+
+**20% Screenshots**
+
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2020-51-53.png![image](https://github.com/user-attachments/assets/bd0e10e3-1c21-4579-b972-2d7dabeb969c)
+
+
+**80% screenshot**
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2020-54-42.png![image](https://github.com/user-attachments/assets/199bf18f-8761-41af-b205-1c7e52e0c09f)
+
+ Rise transition time = 2.24690 − 2.18042 = 0.06648 ns = 66.48 ps
+
+Fall transition time calculation
+Fall transition time = Time taken for output to fall to 20% − Time taken for output to fall to 80% 
+20% of output = 660 mV
+80% of output = 2.64 V 
+
+**50% screenshot**
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2021-04-22.png![image](https://github.com/user-attachments/assets/adbfd76f-ac7a-41a0-92df-dc612e4d6524)
+
+ Fall Transition time = 4.02720 - 4.01995 = 0.00725 ns = 7.25 ps
+
+Rise Cell Delay Calculation
+Rise Cell Delay = Time taken for output to rise to 50% − Time taken for input to fall to 50%
+50 % of 3.3 V= 1.65 V 
+
+
 
 
   </details>  
