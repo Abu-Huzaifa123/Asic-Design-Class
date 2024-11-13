@@ -2087,9 +2087,25 @@ file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2013-32-54.png![ima
 file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2013-34-56.png![image](https://github.com/user-attachments/assets/f1ae7ac7-dab9-4f83-9575-e5b8b4995bdd)
 
 
+### 4. Run 'picorv32a' design congestion aware placement using OpenLANE flow and generate necessary outputs. Command to run placement
+
+```c
+run_placement
+```
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2016-42-17.png![image](https://github.com/user-attachments/assets/cc1cfd76-24a0-4723-8547-7dc1e10abd3c)
 
 
+### 5. Load generated placement def in magic tool and explore the placement. Commands to load placement def in magic in another terminal
 
+```c
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/13-11_11-08/results/placement/
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
+```
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2016-59-11.png![image](https://github.com/user-attachments/assets/990b51f9-db77-4781-87e6-9a7b8ac9c0c2)
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2017-00-56.png![image](https://github.com/user-attachments/assets/7c256f7e-1ea8-405c-b63e-f63c4181a016)
 
 
 
