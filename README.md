@@ -2008,6 +2008,7 @@ file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2000-08-45.png![ima
 ```c
 
 Flop Ratio = 1613/14876 = 0.108429685
+Percentage of Flip Flops = 0.108429685 ∗ 100 = 10.84296854%
 
 ```
 </details>
@@ -2017,31 +2018,25 @@ Flop Ratio = 1613/14876 = 0.108429685
 
 ## Good Floorpan vs Bad Floorplan and Introduction to Library Cell
 
-**Tasks: Perform the floorplanning of the 'picorv32a' design using the OpenLANE flow, ensuring all necessary outputs are generated. Calculate the die area in microns based on the values in the floorplan definition. Next, load the generated floorplan definition into the Magic tool and analyze the floorplan. Afterward, perform a congestion-aware placement of the 'picorv32a' design using the OpenLANE flow and generate the corresponding outputs. Finally, load the placement definition into Magic and examine the placement.**
+### Tasks: 
+    1. Run 'picorv32a' design floorplan using OpenLANE flow and generate necessary outputs.
+    2. Calculate the die area in microns from the values in floorplan def.
+    3. Load generated floorplan def in magic tool and explore the floorplan.
+    4. Run 'picorv32a' design congestion aware placement using OpenLANE flow and generate necessary outputs.
+    5. Load generated placement def in magic tool and explore the placement.
+
+Area of die in microns = Die width in microns * Die height in microns
 
 ### 1. Run 'picorv32a' design floorplan using OpenLANE flow and generate necessary outputs.
 
 ```c
 
-# Change directory to openlane flow directory
 cd Desktop/work/tools/openlane_working_dir/openlane
-
-# alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
-# Since we have aliased the long command to 'docker' we can invoke the OpenLANE flow docker sub-system by just running this command
 docker
-# Now that we have entered the OpenLANE flow contained docker sub-system we can invoke the OpenLANE flow in the Interactive mode using the following command
 ./flow.tcl -interactive
-
-# Now that OpenLANE flow is open we have to input the required packages for proper functionality of the OpenLANE flow
 package require openlane 0.9
-
-# Now the OpenLANE flow is ready to run any design and initially we have to prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
 prep -design picorv32a
-
-# Now that the design is prepped and ready, we can run synthesis using following command
 run_synthesis
-
-# Now we can run floorplan
 run_floorplan
 
 ```
@@ -2057,6 +2052,29 @@ file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2000-32-06.png![ima
 file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2000-37-11.png![image](https://github.com/user-attachments/assets/bc1e314b-1826-4060-afb3-b013ba89be2b)
 
 file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2000-37-21.png![image](https://github.com/user-attachments/assets/3df5d3e8-414b-4336-baa8-41c23475e7a3)
+
+According to floorplan def 1000 Unit Distance = 1 micron Die width in unit distance = 660685 − 0 = 660685 Die height in unit distance = 671405 − 0 = 671405 Distance in microns = Value in unit distance / 1000 Die width in microns = 660685/1000 = 660.685 microns Die height in microns = 671405/1000 = 671.405 microns Are os die in microns = 660.685 ∗ 671.405 = 443587.212425 square microns.
+
+3. Load generated floorplan def in magic tool and explore the floorplan. Commands to load floorplan def in magic in another terminal.
+
+   ```c
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/12-11_18-26/results/floorplan/
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
+   ```
+
+### Screenshots of floorplan def in magic.
+
+
+
+
+
+
+
+
+
+
+
+
 
 </details>
 
