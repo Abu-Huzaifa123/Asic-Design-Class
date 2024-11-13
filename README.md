@@ -2255,4 +2255,14 @@ Rise Cell Delay = Time taken for output to rise to 50% − Time taken for input 
 
 
 
+
   </details>  
+
+
+<details>
+    <summary>Day-4:</summary>
+
+
+
+    </details>  
+  
