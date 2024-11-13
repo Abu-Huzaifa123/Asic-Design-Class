@@ -2057,16 +2057,34 @@ According to floorplan def 1000 Unit Distance = 1 micron Die width in unit dista
 
 3. Load generated floorplan def in magic tool and explore the floorplan. Commands to load floorplan def in magic in another terminal.
 
-   ```c
+```c
 cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/12-11_18-26/results/floorplan/
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
-   ```
+```
 
 ### Screenshots of floorplan def in magic.
 
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2013-37-21.png![image](https://github.com/user-attachments/assets/1c45e9c0-bcce-409b-9389-088a16717bdb)
 
+### Equidistant placement of ports.
 
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2013-29-37.png![image](https://github.com/user-attachments/assets/258b655d-9c21-4000-a187-aaaae12f88a6)
 
+### Port layer as set through config.tcl
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2013-30-42.png![image](https://github.com/user-attachments/assets/625c6558-f07e-459a-8a06-3169d9330b1b)
+
+### Decap Cells and Tap Cells
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2013-32-25.png![image](https://github.com/user-attachments/assets/a92e1408-cca3-44d4-975f-9ea9e193085c)
+
+### Diagonally equidistant Tap cells
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2013-32-54.png![image](https://github.com/user-attachments/assets/a67d9850-5d97-4381-8d33-c392053c33e2)
+
+### Unplaced standard cells at the origin
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2013-34-56.png![image](https://github.com/user-attachments/assets/f1ae7ac7-dab9-4f83-9575-e5b8b4995bdd)
 
 
 
