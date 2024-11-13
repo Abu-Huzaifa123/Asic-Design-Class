@@ -2108,7 +2108,71 @@ file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2016-59-11.png![ima
 file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2017-00-56.png![image](https://github.com/user-attachments/assets/7c256f7e-1ea8-405c-b63e-f63c4181a016)
 
 
+**Commands to exit from current run**
 
+```c
+# Exit from OpenLANE flow
+exit
+
+# Exit from docker sub-system
+exit
+```
 
 </details>
 
+<details>
+    <summary>Day-3:</summary>
+
+## Design Library Cell Using Magic Layout and Cell characterization.
+
+### Tasks:
+1. Clone custom inverter standard cell design from github repository: 2. Load the custom inverter layout in magic and explore. 3. Spice extraction of inverter in magic. 4. Editing the spice model file for analysis through simulation. 5. Post-layout ngspice simulations. 6. Find problem in the DRC section of the old magic tech file for the skywater process and fix them.
+
+Section 3 - Tasks 1 to 5 files, reports and logs can be found in the following folder:
+
+Section 3 - Task 6 files, reports and logs can be found in the following folder:
+
+1. Clone custom inverter standard cell design from github repository
+
+```c
+cd Desktop/work/tools/openlane_working_dir/openlane
+git clone https://github.com/nickson-jose/vsdstdcelldesign
+cd vsdstdcelldesign
+cp /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech .
+ls
+magic -T sky130A.tech sky130_inv.mag &
+
+```
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2018-29-51.png![image](https://github.com/user-attachments/assets/2ce66007-742c-4dbe-8c3a-1e78f3a6584a)
+
+
+2. Load the custom inverter layout in magic and explore.
+
+Screenshot of custom inverter layout in magic
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2018-31-00.png![image](https://github.com/user-attachments/assets/41dfb118-e128-4778-883e-61b81f4a6ce1)
+
+### NMOS and PMOS identified
+
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2018-35-49.png![image](https://github.com/user-attachments/assets/d2b487d3-7158-4cdc-bfd0-95f631084b91)
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2018-37-16.png![image](https://github.com/user-attachments/assets/8f175109-d275-4a41-91ad-5a5b6fef4249)
+
+
+### Output Y connectivity to PMOS and NMOS drain verified
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2018-38-14.png![image](https://github.com/user-attachments/assets/4024fedc-3ab6-4ac9-a310-d081d506e630)
+
+
+### PMOS source connectivity to VDD (VPWR) verified
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2018-47-43.png![image](https://github.com/user-attachments/assets/0b4e94a3-440b-4edd-a883-5b3143968e5e)
+
+### NMOS source connectivity to VSS (here VGND) verified
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-13%2018-49-50.png![image](https://github.com/user-attachments/assets/a6caa6f3-5f6b-4566-a45e-e542678f1a53)
+
+
+
+  </details>  
