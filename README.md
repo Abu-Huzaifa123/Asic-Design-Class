@@ -2412,8 +2412,128 @@ file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2004-25-49.png![ima
 Screenshots of commands run:
 
 
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+## 9. Do Post-Synthesis timing analysis with OpenSTA tool.
+Since we are having 0 wns after improved timing run we are going to do timing analysis on initial run of synthesis which has lots of violations and no parameters were added to improve timing
+
+Commands to invoke the OpenLANE flow include new lef and perform synthesis
+```
+# Change directory to openlane flow directory
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+# alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
+# Since we have aliased the long command to 'docker' we can invoke the OpenLANE flow docker sub-system by just running this command
+docker
+# Now that we have entered the OpenLANE flow contained docker sub-system we can invoke the OpenLANE flow in the Interactive mode using the following command
+./flow.tcl -interactive
+
+# Now that OpenLANE flow is open we have to input the required packages for proper functionality of the OpenLANE flow
+package require openlane 0.9
+
+# Now the OpenLANE flow is ready to run any design and initially we have to prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
+prep -design picorv32a
+
+# Adiitional commands to include newly added lef to openlane flow
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+
+# Command to set new value for SYNTH_SIZING
+set ::env(SYNTH_SIZING) 1
+
+# Now that the design is prepped and ready, we can run synthesis using following command
+run_synthesis
+    ```
+![image](https://github.com/user-attachments/assets/94076a26-8739-4ae6-936f-2bdd1c9544cc)
+
+    ![image](https://github.com/user-attachments/assets/5c94a264-46f8-4caa-bb0a-830fc3e85fd6)
+Newly created pre_sta.conf for STA analysis in openlane directory
+![image](https://github.com/user-attachments/assets/3598f95a-6d23-40fc-acfc-98a2b9e56f7e)
+
+Newly created my_base.sdc for STA analysis in openlane/designs/picorv32a/src directory based on the file openlane/scripts/base.sdc
+![image](https://github.com/user-attachments/assets/739480da-ff65-43af-b9f8-323ba5d53da5)
+Commands to run STA in another terminal
+```
+# Change directory to openlane
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+# Command to invoke OpenSTA tool with script
+sta pre_sta.conf
+```
+Screenshots of commands run
+
+![image](https://github.com/user-attachments/assets/681714c8-7730-4b32-8095-58a1b19f97a9)
+
+Since more fanout is causing more delay we can add parameter to reduce fanout and do synthesis again
+
+Commands to include new lef and perform synthesis
+```
+# Now the OpenLANE flow is ready to run any design and initially we have to prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
+prep -design picorv32a -tag 14-11_21-08 -overwrite
+
+# Adiitional commands to include newly added lef to openlane flow
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+
+# Command to set new value for SYNTH_SIZING
+set ::env(SYNTH_SIZING) 1
+
+# Command to set new value for SYNTH_MAX_FANOUT
+set ::env(SYNTH_MAX_FANOUT) 4
+
+# Command to display current value of variable SYNTH_DRIVING_CELL to check whether it's the proper cell or not
+echo $::env(SYNTH_DRIVING_CELL)
+
+# Now that the design is prepped and ready, we can run synthesis using following command
+run_synthesis
+```
+Commands run final screenshot
+![Screenshot 2024-11-15 025546](https://github.com/user-attachments/assets/bc57f86c-dfc4-47b3-b2f9-6f566d7736f1)
+
+![image](https://github.com/user-attachments/assets/b1d436a4-2fab-4189-94cd-b80740ad1b11)
+
+Commands to run STA in another terminal
+```
+# Change directory to openlane
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+# Command to invoke OpenSTA tool with script
+sta pre_sta.conf
+```
+Screenshots of commands run
+### 10. Make timing ECO fixes to remove all violations.
+OR gate of drive strength 2 is driving 4 fanouts
+![image](https://github.com/user-attachments/assets/c9dbdc48-16cd-4b3c-9312-fe2a3cf53efd)
+
+Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4
+```
+# Reports all the connections to a net
+report_net -connections _11672_
+
+# Checking command syntax
+help replace_cell
+
+# Replacing cell
+replace_cell _14510_ sky130_fd_sc_hd__or3_4
+
+# Generating custom timing report
+report_checks -fields {net cap slew input_pins} -digits 4
+```
+Result - slack reduced
+![image](https://github.com/user-attachments/assets/821483c9-5fef-4fbb-a754-34c1c2487978)
+
+
+
+
 </details>  
   
