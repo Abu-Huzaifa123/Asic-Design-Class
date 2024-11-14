@@ -2388,13 +2388,14 @@ Condition 1: The input and output ports of the standard cell should lie on the i
 
 ```c
 cd Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign
-magic -T sky130A.tech sky130_inv.mag &
+magic -T sky130A.tech sky130_abuinv.mag &
 
 ```
 
 Snapshots of sky130_fd_sc_hd
 
-file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2000-18-56.png![image](https://github.com/user-attachments/assets/676e0941-9ae1-4f55-a5fd-52f4695b2bd6)
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2019-13-43.png![image](https://github.com/user-attachments/assets/4de32aaf-18f8-48d1-a6ff-f3060016ce8f)
+
 
 
 Commands for tkcon window to set grid as tracks of locali layer
@@ -2405,7 +2406,8 @@ grid 0.46um 0.34um 0.23um 0.17um
 ```
 Snapshots of commands run
 
-file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2000-52-11.png![image](https://github.com/user-attachments/assets/a97492fe-37ae-4132-931b-8fa47ce3af91)
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2019-11-55.png![image](https://github.com/user-attachments/assets/ed51b364-7c6a-42de-8dc4-7b824b17e122)
+
 
 condition 1 verified
 
@@ -2422,16 +2424,16 @@ Width of standard cell = 1.77 um = 0.58 ∗ 3
 2. Save the finalized layout with custom name and open it. Command for tkcon window to save the layout with custom name.
 
 ```c
-save sky130_vsdinv.mag
-magic -T sky130A.tech sky130_vsdinv.mag &
+save sky130_abuinv.mag
+magic -T sky130A.tech sky130_abuinv.mag &
 
 ```
 Now, type the following command in tkcon window:
 
 ```c
 lef write
-```
-Snapshot of newly created lef file
+
+Edited config.tcl to include the added lef and change library to ones we added in src directory
 
 file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2002-17-35.png![image](https://github.com/user-attachments/assets/6c022fb1-cc53-4930-a625-9ba07cdfef22)
 
@@ -2447,7 +2449,8 @@ ls ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
 
 Snapshot of commands:
 
-file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2001-53-36.png![image](https://github.com/user-attachments/assets/51494c4d-f534-4e62-a68a-48e8e12c9c30)
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2019-11-55.png![image](https://github.com/user-attachments/assets/d0912c52-f772-4a36-8261-17c6886cf35a)
+
 
 5. Edit 'config.tcl' to change lib file and add the new extra lef into the openlane flow. Commands to be added to config.tcl to include our custom cell in the openlane flow.
 
@@ -2480,12 +2483,17 @@ run_synthesis
 ```
 Snapshots of commands:
 
-file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2002-03-50.png![image](https://github.com/user-attachments/assets/f22773d5-318f-4714-9217-0715d86e62c3)
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2021-46-01.png![image](https://github.com/user-attachments/assets/2f219011-433c-4df7-90a6-db41e451fb30)
+
 
     
-file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2002-11-11.png![image](https://github.com/user-attachments/assets/6f9e9d8e-e207-4913-a198-2f7ae5b29734)
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2021-50-39.png![image](https://github.com/user-attachments/assets/e36f462c-e009-4330-8c8d-f01ced363872)
 
-file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2002-11-44.png![image](https://github.com/user-attachments/assets/3ca3d8a6-2ad4-4c2f-bb98-3bd34745ac44)
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2021-52-26.png![image](https://github.com/user-attachments/assets/fb132f06-c009-46da-b50a-a3f65eb1ff06)
+
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2021-52-20.png![image](https://github.com/user-attachments/assets/0487c576-dde3-4635-b70f-ba05ae909794)
+
    
 7. Remove/reduce the newly introduced violations with the introduction of custom inverter cell by modifying design parameters. Noting down current design values generated before modifying parameters to improve timing.
 
