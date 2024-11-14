@@ -2253,6 +2253,110 @@ Rise Cell Delay = Time taken for output to rise to 50% − Time taken for input 
 50 % of 3.3 V= 1.65 V 
 
 
+6. Find problem in the DRC section of the old magic tech file for the skywater process and fix them.
+
+Link to Sky130 Periphery rules: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
+
+Commands to download and view the corrupted skywater process magic tech file and associated files to perform drc corrections
+
+```c
+# Change to home directory
+cd
+
+# Command to download the lab files
+wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz
+
+# Since lab file is compressed command to extract it
+tar xfz drc_tests.tgz
+
+# Change directory into the lab folder
+cd drc_tests
+
+# List all files and directories present in the current directory
+ls -al
+
+# Command to view .magicrc file
+gvim .magicrc
+
+# Command to open magic tool in better graphics
+magic -d XR &
+```
+Screenshots of commands run
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-15%2001-48-35.png![image](https://github.com/user-attachments/assets/0080cdb2-88f6-46aa-b186-a697050b8fb0)
+
+
+Screenshot of .magicrc file
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-15%2001-54-34.png![image](https://github.com/user-attachments/assets/e8958b38-6843-4522-a57a-7869616d8fcd)
+
+
+### Incorrectly implemented poly.9 simple rule correction
+
+Screenshot of poly rules
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-15%2001-55-40.png![image](https://github.com/user-attachments/assets/f8129e39-15c5-48f8-9787-70c806b28bdc)
+
+
+Incorrectly implemented poly.9 rule no drc violation even though spacing < 0.48u
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-15%2001-58-30.png![image](https://github.com/user-attachments/assets/75822978-4762-4a28-89f5-3df4af3c4370)
+
+
+New commands inserted in sky130A.tech file to update drc
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-15%2002-06-40.png![image](https://github.com/user-attachments/assets/c485efb9-5fe8-46a9-a316-e798df9710ee)
+
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-15%2002-08-19.png![image](https://github.com/user-attachments/assets/6d01f347-eb54-47a4-b4a9-0ff4f1c9cc6b)
+
+Commands to run in tkcon window
+
+```c
+# Loading updated tech file
+tech load sky130A.tech
+
+# Must re-run drc check to see updated drc errors
+drc check
+
+# Selecting region displaying the new errors and getting the error messages 
+drc why
+```
+
+Screenshot of magic window with rule implemented
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-15%2002-14-14.png![image](https://github.com/user-attachments/assets/95de67e9-f709-4def-ae81-9fdde304dcce)
+
+
+Incorrectly implemented difftap.2 simple rule correction
+
+Screenshot of difftap rules 
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-15%2002-18-08.png![image](https://github.com/user-attachments/assets/072d5cd7-dd7b-4df2-8bdf-929f6e5a8c23)
+
+
+Screenshot of difftap rules
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-15%2002-14-14.png![image](https://github.com/user-attachments/assets/6876c783-21bc-4318-9327-e081072c9673)
+
+Commands to run in tkcon window
+```c
+# Loading updated tech file
+tech load sky130A.tech
+
+# Change drc style to drc full
+drc style drc(full)
+
+# Must re-run drc check to see updated drc errors
+drc check
+
+# Selecting region displaying the new errors and getting the error messages 
+drc why
+```
+
+Screenshot of magic window with rule implemented showing no errors found 
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-15%2002-11-28.png![image](https://github.com/user-attachments/assets/7b6ad811-c293-40d6-bf6a-6dcde8aee31a)
 
 
 
