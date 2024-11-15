@@ -2497,7 +2497,11 @@ file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2021-52-20.png![ima
    
 7. Remove/reduce the newly introduced violations with the introduction of custom inverter cell by modifying design parameters. Noting down current design values generated before modifying parameters to improve timing.
 
-file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2002-13-36.png![image](https://github.com/user-attachments/assets/fe399a51-5248-43ee-b426-9f0e90fc26c9)
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2022-02-10.png![image](https://github.com/user-attachments/assets/8e2dd904-2bc1-41f3-93cd-421d6d55dfb9)
+
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2022-03-33.png![image](https://github.com/user-attachments/assets/e20ea831-1506-4475-866f-2fc1bce383c7)
+
    
 Commands to view and change parameters to improve timing and run synthesis
 
@@ -2523,17 +2527,67 @@ file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2004-25-49.png![ima
 
 Screenshots of commands run:
 
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2022-02-10.png![image](https://github.com/user-attachments/assets/21c5fbe7-d14d-4acb-ae35-b7f36449fcde)
+
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2022-03-33.png![image](https://github.com/user-attachments/assets/b817c14b-030c-40f5-b669-2d1b6176999a)
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2022-04-03.png![image](https://github.com/user-attachments/assets/2c2577b6-d2ad-4f00-a456-7937d54b91b2)
+
+
+8. Once synthesis has accepted our custom inverter we can now run floorplan and placement and verify the cell is accepted in PnR flow.
+
+Now that our custom inverter is properly accepted in synthesis we can now run floorplan using following command
+```c
+# Now we can run floorplan
+run_floorplan
+```
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2022-05-00.png![image](https://github.com/user-attachments/assets/be03f8ce-d283-4ebe-9d9c-959089a71d88)
+
+
+Since we are facing unexpected un-explainable error while using run_floorplan command, we can instead use the following set of commands available based on information from Desktop/work/tools/openlane_working_dir/openlane/scripts/tcl_commands/floorplan.tcl and also based on Floorplan Commands section in Desktop/work/tools/openlane_working_dir/openlane/docs/source/OpenLANE_commands.md
+
+# Follwing commands are alltogather sourced in "run_floorplan" command
+init_floorplan
+place_io
+tap_decap_or
+
+Screenshots of commands run
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2022-06-09.png![image](https://github.com/user-attachments/assets/0ad1733e-dda8-4671-869f-bed1e99b0aa3)
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2022-06-16.png![image](https://github.com/user-attachments/assets/1a10aae3-ffd1-44f4-9126-ba916466b19d)
+
+
+Now that floorplan is done we can do placement using following command
+
+# Now we are ready to run placement
+```c
+run_placement
+```
+Screenshots of command run
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2022-07-59.png![image](https://github.com/user-attachments/assets/7e6abcd1-a39c-4f1f-9ac2-52c40fc0d6ea)
+
+
+Commands to load placement def in magic in another terminal
+```c
+# Change directory to path containing generated placement def
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/14-11_16-15/results/placement/
+
+# Command to load the placement def in magic tool
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
+```
+Screenshot of placement def in magic
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2022-07-59.png![image](https://github.com/user-attachments/assets/5eeb2fe5-937d-4ecd-9387-c64e968fcbb8)
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2022-22-16.png![image](https://github.com/user-attachments/assets/aec7540d-e889-41c4-bc0a-95dd7ae93a4e)
 
 
 
-
-
-
-
-
-
-
-
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2022-23-16.png![image](https://github.com/user-attachments/assets/41b3c30a-a088-43c2-acfd-77a1e7705d19)
 
 
 
