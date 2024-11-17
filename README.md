@@ -2591,7 +2591,10 @@ Screenshot of placement def in magic
 
 file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2022-07-59.png![image](https://github.com/user-attachments/assets/5eeb2fe5-937d-4ecd-9387-c64e968fcbb8)
 
-![Screenshot 2024-11-14 021227](https://github.com/user-attachments/assets/4cceec77-58d2-42f2-bfde-bc6079f4b0c9)
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2002-31-45.png![image](https://github.com/user-attachments/assets/1ea5a997-c72c-41f5-a7c1-e2e738159c87)
+
+file:///home/vsduser/Pictures/Screenshot%20from%202024-11-14%2002-40-14.png![image](https://github.com/user-attachments/assets/5b3477e4-6df3-45ba-b59e-8862d8a138aa)
+
 
 
 ### 9. Do Post-Synthesis timing analysis with OpenSTA tool.
