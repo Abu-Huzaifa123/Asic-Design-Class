@@ -3188,9 +3188,9 @@ file:///home/vsduser/Pictures/Screenshot%20from%202024-11-15%2001-34-53.png![ima
 file:///home/vsduser/Pictures/Screenshot%20from%202024-11-15%2001-35-21.png![image](https://github.com/user-attachments/assets/cbe9af8c-62a9-4986-bff9-96f4d9fab708)
 
 
-</details>  
+</details> 
 
-
+</details>
 
 <details>
  
@@ -3277,6 +3277,27 @@ make gui_final
 ![Screenshot from 2024-11-24 19-46-22](https://github.com/user-attachments/assets/568fe803-d956-4dd3-8c6d-0f0a6b11b73c)
 
 ![Screenshot from 2024-11-24 19-46-10](https://github.com/user-attachments/assets/340b5d89-8826-45c0-8a8b-1aed06d55c1e)
+
+### Makefile
+
+![Screenshot from 2024-11-26 02-59-25](https://github.com/user-attachments/assets/de945704-6d7a-46ff-a09b-2ba96fc01605)
+
+![Screenshot from 2024-11-26 02-59-33](https://github.com/user-attachments/assets/9c840aaf-5864-4abf-bbf7-06fafa12c7d5)
+
+![Screenshot from 2024-11-26 02-59-44](https://github.com/user-attachments/assets/2d5fa313-96e0-4e30-9711-a5efbece7b83)
+
+![Screenshot from 2024-11-26 02-59-52](https://github.com/user-attachments/assets/10441d1d-65bd-49dd-944c-15f744e80174)
+
+![Screenshot from 2024-11-26 03-00-01](https://github.com/user-attachments/assets/a999ee52-f03b-4e63-a7b0-13356471d5a5)
+
+![Screenshot from 2024-11-26 03-00-11](https://github.com/user-attachments/assets/05840d23-ecd7-4348-8099-a133a5711f29)
+
+![Screenshot from 2024-11-26 03-00-21](https://github.com/user-attachments/assets/16f280a2-984e-4017-81c4-f70bd192e2ff)
+
+![Screenshot from 2024-11-26 03-00-28](https://github.com/user-attachments/assets/227759f8-f1fb-44ed-aa68-1fd50152fa0c)
+
+![Screenshot from 2024-11-26 03-00-36](https://github.com/user-attachments/assets/1c83f430-d3f7-4f6a-994e-870087ca1b7e)
+
 
 ### Commands for synthesis:
 
