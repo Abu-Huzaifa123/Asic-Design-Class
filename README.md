@@ -3278,6 +3278,88 @@ make gui_final
 
 ![Screenshot from 2024-11-24 19-46-10](https://github.com/user-attachments/assets/340b5d89-8826-45c0-8a8b-1aed06d55c1e)
 
+### Commands for synthesis:
+
+```c
+make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk synth
+
+```
+
+![Screenshot from 2024-11-25 21-54-21](https://github.com/user-attachments/assets/4231537f-5d33-45e3-bb57-8c4f47d09949)
+
+![Screenshot from 2024-11-25 21-54-44](https://github.com/user-attachments/assets/a79c06ab-df03-4c7c-8f7f-b4859b85180f)
+
+![Screenshot from 2024-11-26 00-00-06](https://github.com/user-attachments/assets/5b368dfc-6475-45f2-ac56-455a38e92676)
+
+![Screenshot from 2024-11-26 00-01-37](https://github.com/user-attachments/assets/58a87fa0-cbe6-4f93-b854-d8aebb348796)
+
+![Screenshot from 2024-11-26 00-12-24](https://github.com/user-attachments/assets/e0ac986a-c06d-4a66-9d16-691ad691c33d)
+
+![Screenshot from 2024-11-26 00-12-44](https://github.com/user-attachments/assets/2a5f547e-7a1c-47fd-9361-6f6ddb5f8188)
+
+![Screenshot from 2024-11-26 00-13-32](https://github.com/user-attachments/assets/32a7d888-7aab-467a-83fa-698d1e4634fb)
+
+### Commands for floorplan:
+
+```c
+make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk floorplan
+```
+![Screenshot from 2024-11-25 21-55-02](https://github.com/user-attachments/assets/9e0a613a-3be2-4242-98a7-40b82d4ba231)
+
+![Screenshot from 2024-11-25 21-55-13](https://github.com/user-attachments/assets/cf26e9de-bebb-4c97-847c-eaea4468ae8b)
+
+![Screenshot from 2024-11-25 21-55-23](https://github.com/user-attachments/assets/5e3b4053-1e7c-4e56-9e43-920f756ce216)
+
+
+### Floorplan
+
+```c
+make gui_floorplan
+```
+![Screenshot from 2024-11-25 21-57-03](https://github.com/user-attachments/assets/b0affe36-1d8d-4531-86ed-08f77ebbdba3)
+
+```c
+sudo make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_floorplan
+
+```
+![Screenshot from 2024-11-25 21-58-20](https://github.com/user-attachments/assets/0730aa1e-71d0-4582-a7b4-8ed26fc98c4d)
+
+### Placement
+
+```c
+
+sudo make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk place
+
+```
+![Screenshot from 2024-11-25 23-08-01](https://github.com/user-attachments/assets/be394031-378e-4142-803b-99f09d110bf6)
+
+![Screenshot from 2024-11-25 23-08-13](https://github.com/user-attachments/assets/cf71c67e-c557-4f9f-b150-769aea95aa9f)
+
+
+```c
+make gui_place
+```
+
+![Screenshot from 2024-11-25 23-10-06](https://github.com/user-attachments/assets/f50e4f5d-af71-4ad2-bcb2-8ca891db3026)
+
+### Command for CTS:
+
+```c
+sudo make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk cts
+```
+
+![Screenshot from 2024-11-25 23-12-30](https://github.com/user-attachments/assets/750b676e-3568-4846-a246-3dd0d4d66e2f)
+
+
+```c
+make gui_cts
+```
+![Screenshot from 2024-11-25 23-13-22](https://github.com/user-attachments/assets/7e45ae6e-304b-4f42-842d-68739e0d448d)
+
+![Screenshot from 2024-11-26 00-34-44](https://github.com/user-attachments/assets/c0e3e619-bb9a-4f55-b1b8-83e5ab6d0827)
+
+### Routing
+
 
 
 
