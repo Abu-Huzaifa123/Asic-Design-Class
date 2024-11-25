@@ -3188,13 +3188,113 @@ file:///home/vsduser/Pictures/Screenshot%20from%202024-11-15%2001-34-53.png![ima
 file:///home/vsduser/Pictures/Screenshot%20from%202024-11-15%2001-35-21.png![image](https://github.com/user-attachments/assets/cbe9af8c-62a9-4986-bff9-96f4d9fab708)
 
 
-
 </details>  
 
 
 
+<details>
+ 
+<summary> <h2>Task-13</h2> </summary>
+
+## Task-13: OpenROAD Physical Design
+
+### OpenRoad:
+
+OpenROAD is a powerful, open-source tool designed for integrated circuit (IC) physical design, providing a comprehensive suite of features that spans the entire chip design flow. From RTL (Register Transfer Level) to GDSII (Graphic Data System II) generation, OpenROAD ensures an efficient, streamlined transition between design stages.
+
+### Key Features:
+
+**1. Synthesis:** OpenROAD integrates synthesis tools to convert RTL descriptions into gate-level netlists, which serve as the foundation for the subsequent design stages.
+
+**2. Floorplanning:** It offers advanced floorplanning capabilities, enabling efficient area utilization, power distribution, and placement of functional blocks within the chip.
+
+**3. Placement:** OpenROAD employs hierarchical placement algorithms that focus on minimizing wire length and congestion while improving performance.
+
+**4. Routing:** The tool provides optimized routing solutions for signal and power paths, balancing performance with manufacturing constraints.
+
+**5. Parasitic Extraction:** OpenROAD includes robust parasitic extraction features, allowing designers to extract capacitance, resistance, and inductance values for accurate circuit simulations.
+
+**6. Timing Analysis:** With built-in static timing analysis (STA), OpenROAD ensures that the chip meets its timing requirements for reliable operation.
+
+### Optimization:
+
+**1. Timing Optimization:** OpenROAD optimizes the design to meet stringent timing constraints, enhancing performance by reducing delays and improving clock distribution.
+
+**2. Power Optimization:** The tool also focuses on power consumption, providing techniques to reduce dynamic and leakage power through its placement and routing algorithms.
+
+### Extensibility:
+
+OpenROAD's modular architecture makes it highly extensible, allowing users to incorporate custom algorithms, tools, or third-party features into the flow. This flexibility ensures that it can be adapted to various design requirements or technological advancements.
+
+By offering an integrated approach to IC physical design, OpenROAD significantly accelerates the development cycle, improving efficiency while reducing the need for manual intervention. This makes it an ideal solution for both academic research and industrial-scale chip design.
+
+### Installing and setting up ORFS
+
+```c
+git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts
+cd OpenROAD-flow-scripts
+sudo ./setup.sh
+```
+
+### Build
+
+```c
+./build_openroad.sh --local
+```
+
+![Screenshot from 2024-11-24 18-14-55](https://github.com/user-attachments/assets/730feb41-35b9-4149-9b0d-2034facf158e)
+
+![Screenshot from 2024-11-24 18-15-05](https://github.com/user-attachments/assets/33cdd4df-17ac-4912-9c37-72af3ceb9cc4)
+
+![Screenshot from 2024-11-24 18-43-51](https://github.com/user-attachments/assets/a0addd72-f01c-4737-be12-cecf3fc81a05)
+
+![Screenshot from 2024-11-24 18-45-03](https://github.com/user-attachments/assets/a9fe480e-bb88-4e0c-9d89-88647fef0cec)
+
+![Screenshot from 2024-11-24 19-14-24](https://github.com/user-attachments/assets/257e5c52-5f24-4341-8cfb-99044ef056e4)
+
+
+### Verify Installation
+```c
+source ./env.sh
+yosys -help
+openroad -help
+cd flow
+make
+```
+
+![Screenshot from 2024-11-24 19-33-35](https://github.com/user-attachments/assets/1a6f440e-d993-4daa-a125-7952100c3eab)
+
+![Screenshot from 2024-11-24 19-33-43](https://github.com/user-attachments/assets/a3b13ae6-885f-496f-a107-51dedc0cc9f8)
+
+![Screenshot from 2024-11-24 19-33-52](https://github.com/user-attachments/assets/4536e8bd-4cb0-4c70-8d72-ffb2ee1726c4)
 
 
 
+```c
+make gui_final
+```
+
+![Screenshot from 2024-11-24 19-46-22](https://github.com/user-attachments/assets/568fe803-d956-4dd3-8c6d-0f0a6b11b73c)
+
+![Screenshot from 2024-11-24 19-46-10](https://github.com/user-attachments/assets/340b5d89-8826-45c0-8a8b-1aed06d55c1e)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</details>  
 
 
