@@ -3360,20 +3360,40 @@ make gui_cts
 
 ### Routing
 
+```c
+make gui_route
+```
+![Screenshot from 2024-11-25 23-15-40](https://github.com/user-attachments/assets/9ec48a7a-d6dd-4db7-9e92-d495f9eecd67)
 
+### Final Layout
 
+```c
+make gui_final
+```
+![Screenshot from 2024-11-25 23-17-05](https://github.com/user-attachments/assets/4ad0c38e-be8e-466e-9b6c-ce1e8ae5e834)
 
+![Screenshot from 2024-11-25 23-18-17](https://github.com/user-attachments/assets/2e44010b-7bc7-43cb-97ab-cea49e810097)
 
+![Screenshot from 2024-11-25 23-18-22](https://github.com/user-attachments/assets/78785367-a2c5-4c81-95a5-f5b2bf5a3266)
 
+![Screenshot from 2024-11-25 23-19-37](https://github.com/user-attachments/assets/6df78260-0776-4ea6-b7b0-beed705073f5)
 
+![Screenshot from 2024-11-25 23-31-18](https://github.com/user-attachments/assets/88cd4525-2398-4ed9-a24f-f6b6ac3051ac)
 
+To load the GDS file in KLayout, use the following commands.
 
+```c
 
+ klayout -e -nn ./platforms/nangate45/FreePDK45.lyt -l ./platforms/nangate45/FreePDK45.lyp ./results/nangate45/gcd/base/6_final.gds
+```
+![Screenshot from 2024-11-25 23-36-10](https://github.com/user-attachments/assets/d1311362-4e35-4221-aaab-e34a3ee36309)
 
+### Command for Routing
 
-
-
-
+```c
+sudo make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk route
+```
+![Screenshot from 2024-11-25 23-29-04](https://github.com/user-attachments/assets/49438214-1492-40e1-b275-7115dbdd3581)
 
 
 
