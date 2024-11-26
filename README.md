@@ -3298,86 +3298,7 @@ make gui_final
 
 ![Screenshot from 2024-11-26 03-00-36](https://github.com/user-attachments/assets/1c83f430-d3f7-4f6a-994e-870087ca1b7e)
 
-```c
-export DESIGN_NICKNAME = vsdbabysoc
-export DESIGN_NAME = vsdbabysoc
-export PLATFORM    = sky130hd
 
-# export VERILOG_FILES_BLACKBOX = $(DESIGN_HOME)/src/$(DESIGN_NICKNAME)/IPs/*.v
-# export VERILOG_FILES = $(sort $(wildcard $(DESIGN_HOME)/src/$(DESIGN_NICKNAME)/*.v))
-# Explicitly list the Verilog files for synthesis
-export VERILOG_FILES = /home/vaibhav2000/OpenRoad/flow/designs/sky130hd/vsdbabysoc/src/vsdbabysoc.v \
-                       /home/vaibhav2000/OpenRoad/flow/designs/sky130hd/vsdbabysoc/src/module/rvmyth.v \
-                       /home/vaibhav2000/OpenRoad/flow/designs/sky130hd/vsdbabysoc/src/clk_gate.v
-
-export SDC_FILE      = /home/vaibhav2000/OpenRoad/flow/designs/sky130hd/vsdbabysoc/src/sdc/vsdbabysoc_synthesis.sdc
-
-#export DIE_AREA   = 0 0 1500 1500
-# export CORE_AREA  = 10 10 2910 3510
-
-# export PLACE_DENSITY ?= 0.23
-
-export vsdbabysoc_DIR = /home/vaibhav2000/OpenRoad/flow/designs/sky130hd/vsdbabysoc
-
-export VERILOG_INCLUDE_DIRS = /home/vaibhav2000/OpenRoad/flow/designs/sky130hd/vsdbabysoc/src/include
-
-# export SDC_FILE      = $(wildcard $(vsdbabysoc_DIR)/sdc/*.sdc)
-export ADDITIONAL_GDS  =/home/vaibhav2000/OpenRoad/flow/designs/sky130hd/vsdbabysoc/src/gds
-export ADDITIONAL_LEFS  = /home/vaibhav2000/OpenRoad/flow/designs/sky130hd/vsdbabysoc/src/lef
-
-export ADDITIONAL_LIBS = /home/vaibhav2000/OpenRoad/flow/designs/sky130hd/vsdbabysoc/src/lib/avsddac.lib \
-             /home/vaibhav2000/OpenRoad/flow/designs/sky130hd/vsdbabysoc/src/lib/avsdpll.lib
-# Clock Configuration (vsdbabysoc specific)
-# export CLOCK_PERIOD = 20.0
-export CLOCK_PORT = CLK
-export CLOCK_NET = $(CLOCK_PORT)
-
-# Floorplanning Configuration (vsdbabysoc specific)
-export FP_PIN_ORDER_CFG = /home/vaibhav2000/OpenRoad/flow/designs/sky130hd/vsdbabysoc/pin_order.cfg
-export FP_SIZING = absolute
-export DIE_AREA = 0 0 2000 2000
-export CORE_AREA = 10 10 1800 1800
-
-
-# export PL_RESIZER_HOLD_MAX_BUFFER_PERCENT = 80
-# export PL_RESIZER_HOLD_MAX_BUFFER_COUNT = 5000  # Set the buffer limit to a higher value if needed
-# export GLB_RESIZER_HOLD_MAX_BUFFER_PERCENT = 80
-
-# Hold Slack Margin Configuration
-# export PL_RESIZER_HOLD_SLACK_MARGIN = 0.01
-# export GLB_RESIZER_HOLD_SLACK_MARGIN = 0.01
-
-
-export BOTTOM_MARGIN_MULT = 50
-export TOP_MARGIN_MULT = 50
-export LEFT_MARGIN_MULT = 200
-export RIGHT_MARGIN_MULT = 200
-
-# Placement Configuration (vsdbabysoc specific)
-export MACRO_PLACEMENT_CFG = /home/vaibhav2000/OpenRoad/flow/designs/sky130hd/vsdbabysoc/macro.cfg
-
-# Magic Tool Configuration
-export MAGIC_ZEROIZE_ORIGIN = 0
-export MAGIC_EXT_USE_GDS = 1
-
-export SYNTH_HIERARCHICAL = 1
-
-# export RTLMP_BOUNDARY_WT = 0
-#  MACRO_PLACE_HALO = 100 100
-# export MACRO_PLACE_CHANNEL = 200 200
-
-# CTS tuning
-# export CTS_BUF_DISTANCE = 600
-# export SKIP_GATE_CLONING = 1
-
-# export SETUP_SLACK_MARGIN = 0.2
-
-# This is high, some SRAMs should probably be converted
-# to real SRAMs and not instantiated as flops
-# export SYNTH_MEMORY_MAX_BITS ?= 42000
-
-
-```
 
 ### Commands for synthesis:
 
@@ -3393,7 +3314,7 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk synth
 
 ![Screenshot from 2024-11-26 12-13-34](https://github.com/user-attachments/assets/b4489402-dc65-471a-9696-74313567d649)
 
-![Screenshot from 2024-11-26 12-14-47](https://github.com/user-attachments/assets/7fef9cb4-8c95-4a76-a6a2-eb6eadb611ae)
+![Screenshot from 2024-11-26 12-14-47](https://githubcom/user-attachments/assets/7fef9cb4-8c95-4a76-a6a2-eb6eadb611ae)
 
 ![Screenshot from 2024-11-26 12-14-55](https://github.com/user-attachments/assets/a3a4afc6-36d2-4ef2-a9f0-5bae97564288)
 
