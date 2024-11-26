@@ -3340,14 +3340,6 @@ sudo make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_floorplan
 
 ![Screenshot from 2024-11-26 10-40-21](https://github.com/user-attachments/assets/4ab191a5-083d-4622-b9c2-8c36e81b9edd)
 
-### Timing Report for floorplan
-
-![Screenshot from 2024-11-26 13-02-02](https://github.com/user-attachments/assets/d9a09584-0864-4272-ad07-872712d9c385)
-
-![Screenshot from 2024-11-26 13-04-06](https://github.com/user-attachments/assets/d19f7095-bae5-4b4f-8643-d443214e2cd0)
-
-
-### Heatmap
 
 ![Screenshot from 2024-11-26 11-25-36](https://github.com/user-attachments/assets/74474344-82aa-4791-ac69-03e1438e9740)
 
@@ -3355,6 +3347,11 @@ sudo make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_floorplan
 
 ![Screenshot from 2024-11-26 11-26-39](https://github.com/user-attachments/assets/c1b23088-59ed-4cd3-a5ee-87c094f197b3)
 
+### Timing Report for floorplan
+
+![Screenshot from 2024-11-26 13-02-02](https://github.com/user-attachments/assets/d9a09584-0864-4272-ad07-872712d9c385)
+
+![Screenshot from 2024-11-26 13-04-06](https://github.com/user-attachments/assets/d19f7095-bae5-4b4f-8643-d443214e2cd0)
 
 ### Placement
 
