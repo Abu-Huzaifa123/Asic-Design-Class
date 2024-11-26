@@ -4096,7 +4096,11 @@ sudo make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk route
 
 ![Screenshot from 2024-11-26 10-48-18](https://github.com/user-attachments/assets/12260a60-3a8a-457c-a1c6-26e8f15c25de)
 
+### QOR Report:
 
+![image](https://github.com/user-attachments/assets/7810b7d0-8db8-4e7a-a786-d8756a3ce932)
+
+![Screenshot from 2024-11-26 18-38-09](https://github.com/user-attachments/assets/09de68d5-a1e0-4ad3-b266-8682665d3553)
 
 
 
